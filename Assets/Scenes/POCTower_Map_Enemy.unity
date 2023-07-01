@@ -227,6 +227,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1312817082}
   - component: {fileID: 1312817081}
+  - component: {fileID: 1312817083}
+  - component: {fileID: 1312817084}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -241,7 +243,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312817080}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9642d1e030df6d4cba6ffbba87b488f, type: 3}
   m_Name: 
@@ -249,6 +251,11 @@ MonoBehaviour:
   mapTile: {fileID: 1802500579558444528, guid: b092db6d7e23de54ebf2860975b2e567, type: 3}
   mapWidth: 10
   mapHeight: 10
+  reachedX: 0
+  reachedY: 0
+  currentTile: {fileID: 0}
+  currentIndex: 0
+  nextIndex: 0
   pathColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   startColor: {r: 0.7615876, g: 0.78431374, b: 0.172549, a: 0.7882353}
   endColor: {r: 1, g: 0, b: 0, a: 1}
@@ -266,6 +273,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1312817083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312817080}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271d5997f4c289c4fb78461d351286e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapTile: {fileID: 1802500579558444528, guid: b092db6d7e23de54ebf2860975b2e567, type: 3}
+  mapWidth: 10
+  mapHeight: 10
+  reachedX: 0
+  reachedY: 0
+  currentTile: {fileID: 0}
+  currentIndex: 0
+  nextIndex: 0
+  pathColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
+  startColor: {r: 0, g: 0, b: 1, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &1312817084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312817080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133d97bb9e7b91e429720d64c137db83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapTile: {fileID: 1802500579558444528, guid: b092db6d7e23de54ebf2860975b2e567, type: 3}
+  mapWidth: 10
+  mapHeight: 10
+  reachedX: 0
+  reachedY: 0
+  currentTile: {fileID: 0}
+  currentIndex: 0
+  nextIndex: 0
+  pathColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.83137256}
+  startColor: {r: 0, g: 0.85882354, b: 0.038020153, a: 0.8784314}
+  endColor: {r: 0.8862745, g: 0.10067612, b: 0.07058821, a: 1}
+  randomnessFactor: 0.5
 --- !u!1 &1431593213
 GameObject:
   m_ObjectHideFlags: 0
