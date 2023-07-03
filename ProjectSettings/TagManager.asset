@@ -7,6 +7,7 @@ TagManager:
   - Object1
   - Object2
   - Object3
+  - TEMPORARY
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - BUILDINGS
   - 
   - 
   - 

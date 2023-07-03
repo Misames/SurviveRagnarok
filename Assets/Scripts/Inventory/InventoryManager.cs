@@ -14,6 +14,9 @@ public class InventoryManager : MonoBehaviour
         if(selectedSlot >= 0)
             inventorySlots[selectedSlot].Deselect();
 
+        if (newValue < 0)
+            newValue = 0;
+
         while(inventorySlots[newValue].selectedObject == null)
         {
             newValue--;
@@ -43,5 +46,15 @@ public class InventoryManager : MonoBehaviour
                 ChangeSelectedSlot(number - 1);
             }
         }
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            ChangeSelectedSlot(selectedSlot - 1);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            ChangeSelectedSlot(selectedSlot + 1);
+        }
+
     }
 }
