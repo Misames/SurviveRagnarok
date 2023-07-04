@@ -36,9 +36,9 @@ public class TileManager : MonoBehaviour
 
                 GameObject newTile = Instantiate(TilePrefab, position, Quaternion.identity);
 
-                Tile tileComponent = newTile.GetComponent<Tile>();
+                //Tile tileComponent = newTile.GetComponent<Tile>();
 
-                tileComponent.objectPrefab = selectedPrefab;
+                //tileComponent.objectPrefab = selectedPrefab;
             }
         }
     }
