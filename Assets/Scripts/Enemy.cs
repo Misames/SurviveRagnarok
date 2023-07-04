@@ -50,20 +50,28 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetTile.transform.position, speed * Time.deltaTime);
     }
 
-    private void checkPosition()
+ private void checkPosition()
+{
+    if (targetTile != null && targetTile != MapGenerator.endTile)
     {
-       if (targetTile!= null && targetTile!= MapGenerator.endTile)
+        float distance = (transform.position - targetTile.transform.position).magnitude;
+
+        if (distance < 0.01f)
         {
-            float distance = (transform.position - targetTile.transform.position).magnitude;
+            int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile);
 
-            if (distance < 0.01f)
+            if (currentIndex < MapGenerator.pathTiles.Count - 1)
             {
-                int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile)+1;
-
-                targetTile = MapGenerator.pathTiles[currentIndex+1];
+                targetTile = MapGenerator.pathTiles[currentIndex + 1];
+            }
+            else
+            {
+                // Arrivé à la fin du chemin
+                targetTile = MapGenerator.endTile;
             }
         }
     }
+}
 
     private void Update()
     {

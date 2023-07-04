@@ -8,8 +8,8 @@ public class MapGenerator : MonoBehaviour
 {
     public GameObject mapTile;
 
-    [SerializeField]private int mapWidth ;
-    [SerializeField]private int mapHeight ;
+    [SerializeField]public int mapWidth ;
+    [SerializeField]public int mapHeight ;
 
     public static List<GameObject> mapTiles = new List<GameObject>();
     public static List<GameObject> pathTiles = new List<GameObject>();
@@ -17,12 +17,12 @@ public class MapGenerator : MonoBehaviour
     public static GameObject startTile;
     public static GameObject endTile;
 
-    private bool reachedX = false;
-    private bool reachedY = false;
+    public bool reachedX = false;
+    public bool reachedY = false;
 
-    private GameObject currentTile;
-    private int currentIndex;
-    private int nextIndex;
+    public GameObject currentTile;
+    public int currentIndex;
+    public int nextIndex;
 
     public Color pathColor;
 
@@ -56,7 +56,7 @@ public class MapGenerator : MonoBehaviour
         return edgeTiles;
     }
 
-    private void moveDown()
+    public void moveDown()
     {
         pathTiles.Add(currentTile);
         currentIndex = mapTiles.IndexOf(currentTile);
@@ -64,7 +64,7 @@ public class MapGenerator : MonoBehaviour
         currentTile = mapTiles[nextIndex];
     }
 
-    private void moveLeft()
+    public void moveLeft()
     {
         pathTiles.Add(currentTile);
         currentIndex = mapTiles.IndexOf(currentTile);
@@ -72,7 +72,7 @@ public class MapGenerator : MonoBehaviour
         currentTile = mapTiles[nextIndex];
     }
 
-    private void moveRight()
+    public void moveRight()
     {
         pathTiles.Add(currentTile);
         currentIndex = mapTiles.IndexOf(currentTile);
@@ -80,7 +80,7 @@ public class MapGenerator : MonoBehaviour
         currentTile = mapTiles[nextIndex];
     }
 
-    private void moveUp()
+    public void moveUp()
     {
         pathTiles.Add(currentTile);
         currentIndex = mapTiles.IndexOf(currentTile);
@@ -88,7 +88,7 @@ public class MapGenerator : MonoBehaviour
         currentTile = mapTiles[nextIndex];
     }
 
-    private void generateMap()
+    public void generateMap()
     {
         for (int y = 0; y < mapHeight; y++)
         {
