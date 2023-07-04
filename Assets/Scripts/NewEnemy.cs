@@ -28,6 +28,7 @@ public class NewEnemy : MonoBehaviour
 
             if (pathIndex == LevelManager.main.path.Length)
             {
+                EnemyManager.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
             }
