@@ -9,7 +9,7 @@ public class BuildManager : MonoBehaviour
     public Tile[] tiles;
     public List<GameObject> uitiles;
 
-    public int selectedTile = 0;
+    public int selectedTile = 4;
 
     public Transform tileGridUI;
 
@@ -28,16 +28,43 @@ public class BuildManager : MonoBehaviour
             Color tileColor = UIImage.color;
             tileColor.a = 0.5f;
 
-            if(i == selectedTile)
+            if (i == selectedTile)
             {
                 tileColor.a = 1f;
             }
 
             UIImage.color = tileColor;
+
             uitiles.Add(UITile);
 
             i++;
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int gridPosition = tilemap.WorldToCell(position);
+
+            if (tilemap.HasTile(gridPosition))
+            {
+                tilemap.SetTile(gridPosition, tiles[selectedTile]);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int gridPosition = tilemap.WorldToCell(position);
+
+            if (tilemap.HasTile(gridPosition))
+            {
+                tilemap.SetTile(gridPosition, null);
+            }
+        }
+    }
+
 }
+
