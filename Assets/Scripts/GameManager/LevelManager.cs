@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoundController : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public GameObject basicEnemy;
-
+    public static LevelManager main;
+    
+    public Transform Objectif;
+    public Transform[] enemySpawns ;
+    
+    
     public float timeBetweenWaves;
     public float timeBeforeRoundStarts;
     public float timeVariable;
@@ -16,6 +20,9 @@ public class RoundController : MonoBehaviour
 
     public int round;
 
+    private EnemyManager enemyManager;
+
+
     private void Start()
     {
         isRoundGoing = false;
@@ -25,20 +32,23 @@ public class RoundController : MonoBehaviour
         timeVariable = Time.time + timeBeforeRoundStarts;
 
         round = 1;
-    }
 
+        enemyManager = GetComponent<EnemyManager>();
+        enemyManager.SetSpawnPoints(enemySpawns);
+        enemyManager.SetObjectif(Objectif);
+    }
+    
     private void SpawnEnemies()
     {
-      StartCoroutine("ISpawnEnemies");
+        StartCoroutine("ISpawnEnemies");
     } 
 
     IEnumerator ISpawnEnemies()
     {
-        for (int i = 0; i < round; i++)
-        {
-            GameObject newEnemy = Instantiate(basicEnemy, MapGenerator.startTile.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1f);
-        }
+        
+        enemyManager.SpawnEnemy();
+        yield return new WaitForSeconds(1f);
+        
     }
 
     private void Update()
@@ -51,7 +61,6 @@ public class RoundController : MonoBehaviour
                 isRoundGoing = true;
 
                 SpawnEnemies();
-                return;
             }
 
         }
@@ -72,25 +81,25 @@ public class RoundController : MonoBehaviour
 
         else if (isRoundGoing)
         {
+            /*
             if (Enemies.enemies.Count > 0)
             {
 
             }
 
             else
-            {
-                isIntermission = true;
-                isRoundGoing = false;
+            {*/
+            isIntermission = true;
+            isRoundGoing = false;
 
-                timeVariable = Time.time + timeBetweenWaves;
-                round++;
+            timeVariable = Time.time + timeBetweenWaves;
+            round++;
 
-            }
+            //}
 
         }
 
 
     }
-
 
 }

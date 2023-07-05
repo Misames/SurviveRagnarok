@@ -18,6 +18,9 @@ public class EnemyManager : MonoBehaviour
     [Header("Events")]
     public static UnityEvent onEnemyDestroy= new UnityEvent();
 
+    private Transform[] enemySpawns;
+    private Transform enemyObjectif;
+
     private int currentWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
@@ -53,13 +56,13 @@ public class EnemyManager : MonoBehaviour
         
 
         timeSinceLastSpawn += Time.deltaTime;
-        if (timeSinceLastSpawn >= (1/enemiesPerSecond)&& enemiesLeftToSpawn > 0)
+        /*if (timeSinceLastSpawn >= (1/enemiesPerSecond)&& enemiesLeftToSpawn > 0)
         {
             SpawnEnemy();
             enemiesLeftToSpawn--;
             enemiesAlive++;
             timeSinceLastSpawn = 0;
-        }
+        }*/
 
         if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
         {
@@ -76,11 +79,22 @@ public class EnemyManager : MonoBehaviour
         StartCoroutine(StartWave());
     }
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
         GameObject prefabToSpawn = enemyPrefabs[0];
-        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
-        
+        int r_id = Random.Range(0, enemySpawns.Length);
+        GameObject newEnemy = Instantiate(prefabToSpawn, enemySpawns[r_id].position, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().setTarget(enemyObjectif.position);
+    }
+
+    public void SetSpawnPoints(Transform[] spawns)
+    {
+        enemySpawns = spawns;
+    }
+    
+    public void SetObjectif(Transform objectif)
+    {
+        enemyObjectif = objectif;
     }
 
     private int EnemiesPerWave()
