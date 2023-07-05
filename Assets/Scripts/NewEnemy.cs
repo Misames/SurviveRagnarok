@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class NewEnemy : MonoBehaviour
+public class NewEnemy : Enemy
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
@@ -13,6 +13,11 @@ public class NewEnemy : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    
+    private void Awake()
+    {
+        Enemies.enemies.Add(gameObject);
+    }
 
     private void Start()
     {

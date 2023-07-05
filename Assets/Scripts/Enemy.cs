@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
     private void die()
     {
         Enemies.enemies.Remove(gameObject);
+        EnemyManager.onEnemyDestroy.Invoke();
         Destroy(transform.gameObject);
     }
 
