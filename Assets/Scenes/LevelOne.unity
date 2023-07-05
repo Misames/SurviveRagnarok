@@ -6077,7 +6077,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &558971188 stripped
 GameObject:
@@ -12182,6 +12182,28 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &1470798534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5765959102636950894, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
+  m_PrefabInstance: {fileID: 5765959103687407072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1595871478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5765959104023800493, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
+  m_PrefabInstance: {fileID: 5765959103687407072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1696234337 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 680454987724507221, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
@@ -12198,6 +12220,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5765959102239995666, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
   m_PrefabInstance: {fileID: 5765959103687407072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1918095122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5765959102340223182, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
+  m_PrefabInstance: {fileID: 5765959103687407072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1969260501
 GameObject:
   m_ObjectHideFlags: 0
@@ -13670,6 +13703,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: gold
+      value: 
+      objectReference: {fileID: 1470798534}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1595871478}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1918095122}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildings.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -13739,7 +13784,7 @@ PrefabInstance:
       objectReference: {fileID: 8947173605175833347, guid: c11a0ab03a1306745825768a9505c536, type: 3}
     - target: {fileID: 985617191502328807, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 985617191502328807, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13817,6 +13862,18 @@ PrefabInstance:
     - target: {fileID: 5765959102239995666, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765959102636950894, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
+      propertyPath: m_text
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765959102636950894, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
+      propertyPath: m_fontSize
+      value: 56.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765959102636950894, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
+      propertyPath: m_margin.z
+      value: -129.98645
       objectReference: {fileID: 0}
     - target: {fileID: 5765959103727892753, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_AnchorMax.x
