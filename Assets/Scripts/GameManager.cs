@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public int startingGold = 100; // Or de départ du joueur
     public int playerHealth = 100; // Points de vie du joueur
 
+    public Buildings[] buildings; // Liste de batiment disponible pour le niveau actuel
+
     private int currentWave = 0; // Vague actuelle
     private int currentGold; // Or actuel du joueur
 
