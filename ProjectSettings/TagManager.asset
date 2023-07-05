@@ -45,8 +45,8 @@ TagManager:
   - name: Ground
     uniqueID: 3724499423
     locked: 0
-  - name: Enemy
-    uniqueID: 3214548531
+  - name: Path
+    uniqueID: 1077516311
     locked: 0
   - name: Tower
     uniqueID: 4203192101
@@ -54,6 +54,6 @@ TagManager:
   - name: Bullet
     uniqueID: 3043993707
     locked: 0
-  - name: Path
-    uniqueID: 1077516311
+  - name: Enemy
+    uniqueID: 3214548531
     locked: 0

@@ -9,7 +9,9 @@ public class BuildManager : MonoBehaviour
     public Tile[] tiles;
     public List<GameObject> uitiles;
 
-    public int selectedTile = 4;
+    public Tile groundTile;
+
+    public int selectedTile = 0;
 
     public Transform tileGridUI;
 
@@ -21,6 +23,10 @@ public class BuildManager : MonoBehaviour
             GameObject UITile = new GameObject("UI Tile");
             UITile.transform.parent = tileGridUI;
             UITile.transform.localScale = new Vector3(1f, 1f, 1f);
+
+            int index = i; 
+
+            UITile.AddComponent<Button>().onClick.AddListener(() => OnUITileClicked(index));
 
             Image UIImage = UITile.AddComponent<Image>();
             UIImage.sprite = tile.sprite;
@@ -39,15 +45,16 @@ public class BuildManager : MonoBehaviour
 
             i++;
         }
+
     }
 
     private void Update()
     {
+        Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int gridPosition = tilemap.WorldToCell(position);
+
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int gridPosition = tilemap.WorldToCell(position);
-
             if (tilemap.HasTile(gridPosition))
             {
                 tilemap.SetTile(gridPosition, tiles[selectedTile]);
@@ -56,13 +63,29 @@ public class BuildManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int gridPosition = tilemap.WorldToCell(position);
 
             if (tilemap.HasTile(gridPosition))
             {
-                tilemap.SetTile(gridPosition, null);
+                tilemap.SetTile(gridPosition, groundTile);
             }
+        }
+
+
+    }
+
+    private void OnUITileClicked(int index)
+    {
+        selectedTile = index;
+
+        // Mettez à jour l'apparence des objets de l'UI pour refléter la sélection
+        for (int i = 0; i < uitiles.Count; i++)
+        {
+            Image UIImage = uitiles[i].GetComponent<Image>();
+
+            Color tileColor = UIImage.color;
+            tileColor.a = (i == selectedTile) ? 1f : 0.5f;
+
+            UIImage.color = tileColor;
         }
     }
 
