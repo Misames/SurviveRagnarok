@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: b1ffff684cbea2b41801c4861518a951
+guid: e6195875f10517048896fbc2d3052aba
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3625043607559282579
-    second: Isometric Diamond
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -36,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -50,12 +47,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -66,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -93,30 +90,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -132,43 +105,90 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Isometric Diamond
+      name: images-removebg-preview_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 128
+        width: 112.5
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -6, y: 64}
-        - {x: -128, y: 3}
-        - {x: -128, y: -3}
-        - {x: -6, y: -64}
-        - {x: 6, y: -64}
-        - {x: 128, y: -3}
-        - {x: 128, y: 3}
-        - {x: 6, y: 64}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39f1fdb64fdbe4230800000000000000
-      internalID: 3625043607559282579
+      spriteID: e8f262a7439fa4c48a174f5a7831f5b3
+      internalID: -293181555
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: -6, y: 64}
-      - {x: -128, y: 3}
-      - {x: -128, y: -3}
-      - {x: -6, y: -64}
-      - {x: 6, y: -64}
-      - {x: 128, y: -3}
-      - {x: 128, y: 3}
-      - {x: 6, y: 64}
+    - serializedVersion: 2
+      name: images-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 112.5
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0581fcb7fc7ca741aa130fce73de7cf
+      internalID: -1836621074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: images-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 112.5
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab515a5716fa1b44b8288eada040154
+      internalID: 1812616072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: images-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 112.5
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd4595c59d0b0b4daab1a1ba1bc8ed0
+      internalID: -745255843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -179,7 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Isometric Diamond: 3625043607559282579
+      images-removebg-preview_0: -293181555
+      images-removebg-preview_1: -1836621074
+      images-removebg-preview_2: 1812616072
+      images-removebg-preview_3: -745255843
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
