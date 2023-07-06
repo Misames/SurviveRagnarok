@@ -90,6 +90,7 @@ public class BuildManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log(tilemap.HasTile(gridPosition));
             if (tilemap.HasTile(gridPosition))
             {
 

@@ -62,6 +62,8 @@ public class EnemyManager : MonoBehaviour
         GameObject newEnemy = Instantiate(prefabToSpawn, enemySpawns[randomSpawn].position, Quaternion.identity);
         newEnemy.GetComponent<Enemy>().setTarget(enemyObjectif.position);
         newEnemy.GetComponent<Enemy>().SetEnemyManager(GetComponent<EnemyManager>());
+        enemiesAlive++;
+
     }
 
     public void SetSpawnPoints(Transform[] spawns)

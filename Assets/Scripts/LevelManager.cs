@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     private bool isRoundGoing;
     private bool isIntermission;
     private bool isStartOfRound;
+    private bool isLevelFinished;
 
     public int[] enemiesPerRound;
 
@@ -30,6 +31,7 @@ public class LevelManager : MonoBehaviour
         isRoundGoing = false;
         isStartOfRound = true;
         isIntermission = false;
+        isLevelFinished = false;
 
         timeVariable = Time.time + timeBeforeRoundStarts;
 
@@ -48,6 +50,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
+
         if (isStartOfRound)
         {
             if (Time.time >= timeVariable)
@@ -60,12 +63,12 @@ public class LevelManager : MonoBehaviour
 
         }
 
-        else if (isIntermission)
+        else if (isIntermission )
         {
             if (Time.time >= timeVariable)
             {
                 isIntermission = false;
-                isRoundGoing = true;
+                isStartOfRound = true;
 
             }
                 
@@ -74,13 +77,23 @@ public class LevelManager : MonoBehaviour
 
         else if (isRoundGoing)
         {
+            
             if (enemyManager.GetEnnemiesAlive() == 0)
             {
-                isIntermission = true;
-                isRoundGoing = false;
-
-                timeVariable = Time.time + timeBetweenWaves;
                 currentRound++;
+                if (currentRound == enemiesPerRound.Length)
+                {
+                    isLevelFinished = true;
+                    isIntermission = false;
+                    isRoundGoing = false;
+                }
+                else
+                {
+                    isIntermission = true;
+                    isRoundGoing = false;
+                    timeVariable = Time.time + timeBetweenWaves;
+                }
+                
             }
             
 
