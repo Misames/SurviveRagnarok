@@ -3,10 +3,10 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private GameObject[] enemyPrefabs;
-
-    [SerializeField] private float difficultyScalingFactor = 0.75f;
-
+    [SerializeField]
+    private GameObject[] enemyPrefabs;
+    [SerializeField]
+    private float difficultyScalingFactor = 0.75f;
     private Transform[] enemySpawns;
     private Transform enemyObjectif;
     public float timeBetweenSpawn;

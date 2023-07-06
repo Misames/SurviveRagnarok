@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject GameOverMenu;
     public TextMeshProUGUI health;
     public TextMeshProUGUI gold;
     public TextMeshProUGUI enemy;
@@ -36,12 +38,7 @@ public class GameManager : MonoBehaviour
         gold.text = currentGold.ToString();
         health.text = playerHealth.ToString();
         enemy.text = currentEnemy.ToString();
-    }
-
-    public void StartNextWave()
-    {
-        currentWave++;
-        // Code pour démarrer la prochaine vague d'ennemis
+        Time.timeScale = 1;
     }
 
     public bool CanAfford(uint cost)
@@ -68,14 +65,32 @@ public class GameManager : MonoBehaviour
     {
         // Réduit les points de vie du joueur
         playerHealth -= damage;
+        health.text = playerHealth.ToString();
 
         // Vérifie si le joueur a perdu
         if (playerHealth <= 0)
-            GameOver();
+        {
+            GameOverMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
-    private void GameOver()
+    public void NextLevel()
     {
-        // Code pour gérer la fin du jeu lorsque le joueur a perdu
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    public void RetryLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
     }
 }

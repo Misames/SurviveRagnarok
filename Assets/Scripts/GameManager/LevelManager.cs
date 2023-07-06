@@ -3,6 +3,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager main;
+    public GameObject VictoryMenu;
     public Transform Objectif;
     public Transform[] enemySpawns;
     public float timeBetweenWaves;
@@ -63,6 +64,7 @@ public class LevelManager : MonoBehaviour
                     isLevelFinished = true;
                     isIntermission = false;
                     isRoundGoing = false;
+                    VictoryMenu.SetActive(true);
                 }
                 else
                 {

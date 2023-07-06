@@ -3,7 +3,6 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -11,7 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int killReward;
     [SerializeField]
-    private int damage;
+    public uint damage;
     private EnemyManager enemyManager;
     private Vector3 target;
 
