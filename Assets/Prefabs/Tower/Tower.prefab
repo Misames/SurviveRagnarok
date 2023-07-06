@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1595075549389354074}
   - component: {fileID: 51953306925105723}
   - component: {fileID: 4326435341180955628}
+  - component: {fileID: 9006657372774287133}
   m_Layer: 7
   m_Name: Tower
   m_TagString: Untagged
@@ -157,8 +158,8 @@ SpriteRenderer:
   m_SortingLayerID: -91775195
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 43451106eefff3d42a5beed4f1bc1e8a, type: 3}
-  m_Color: {r: 0.5377358, g: 0.3367996, b: 0.10399607, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 43451106eefff3d42a5beed4f1bc1e8a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -228,6 +229,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9006657372774287133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766265106455303036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b913fbf5b3085d4697073b4350f6731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Circle
+  Health: 100
+  Cost: 50
+  associatedTile: {fileID: 11400000, guid: de64ed6e767cd3546b2cf27652d2e5d8, type: 2}
 --- !u!1 &8638273745652836104
 GameObject:
   m_ObjectHideFlags: 0
