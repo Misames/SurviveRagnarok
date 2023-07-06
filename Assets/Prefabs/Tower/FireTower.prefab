@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,4 +47,4 @@ MonoBehaviour:
   Name: FIRE TOWER
   Health: 100
   Cost: 50
-  associatedTile: {fileID: 11400000, guid: f507f9c2862ce4846baef785fb27a5f1, type: 2}
+  associatedTile: {fileID: 11400000, guid: 11b35c87bd92b7f4e9166b0531490c48, type: 2}
