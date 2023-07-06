@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7855229644084663349}
   - component: {fileID: 2145745940323390446}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5656830208649123510}
   - component: {fileID: 2024782674926290221}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 607732114000486455}
   - component: {fileID: 2230780039576049238}
   - component: {fileID: 7112259996590969712}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Tower 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5086132029495758587}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
