@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -10,9 +8,7 @@ public class Tower : MonoBehaviour
     private float damage;
     [SerializeField]
     private float fireRate;
-
-    private float nextTimeToFire ;
-
+    private float nextTimeToFire;
     public GameObject currentTarget;
 
     private void Start()
@@ -25,15 +21,15 @@ public class Tower : MonoBehaviour
         if (currentTarget == null)
         {
             int layerMask = 1 << 8;
-            RaycastHit2D target = Physics2D.CircleCast(transform.position, range, transform.forward, 0,layerMask);
-            if(target.collider != null)
+            RaycastHit2D target = Physics2D.CircleCast(transform.position, range, transform.forward, 0, layerMask);
+            if (target.collider != null)
                 currentTarget = target.transform.gameObject;
         }
     }
-    
+
     protected virtual void shoot()
     {
-        Enemy enemyScript = currentTarget.GetComponent<Enemy>(); 
+        Enemy enemyScript = currentTarget.GetComponent<Enemy>();
         enemyScript.takeDamage(damage);
     }
 

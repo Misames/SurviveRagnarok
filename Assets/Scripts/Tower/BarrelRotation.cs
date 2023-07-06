@@ -1,27 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BarrelRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
-  public Transform pivot;
-  public Transform barrel;
+    public Transform pivot;
+    public Transform barrel;
+    public Tower tower;
 
-  public Tower tower;
-
-  public void Update()
-  {
-    if (tower != null)
+    public void Update()
     {
-        if (tower.currentTarget != null)
+        if (tower != null)
         {
-            Vector2 relative = tower.currentTarget.transform.position - pivot.position;
-            float angle = Mathf.Atan2(relative.y, relative.x) * Mathf.Rad2Deg;
-            Vector3 newRotation = new Vector3(0, 0, angle);
-            pivot.localRotation = Quaternion.Euler(newRotation);
-        
+            if (tower.currentTarget != null)
+            {
+                Vector2 relative = tower.currentTarget.transform.position - pivot.position;
+                float angle = Mathf.Atan2(relative.y, relative.x) * Mathf.Rad2Deg;
+                Vector3 newRotation = new Vector3(0, 0, angle);
+                pivot.localRotation = Quaternion.Euler(newRotation);
+            }
         }
     }
-  }
 }
