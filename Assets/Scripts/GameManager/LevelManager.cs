@@ -12,13 +12,15 @@ public class LevelManager : MonoBehaviour
     
     public float timeBetweenWaves;
     public float timeBeforeRoundStarts;
-    public float timeVariable;
+    private float timeVariable;
 
-    public bool isRoundGoing;
-    public bool isIntermission;
-    public bool isStartOfRound;
+    private bool isRoundGoing;
+    private bool isIntermission;
+    private bool isStartOfRound;
 
-    public int round;
+    public int[] enemiesPerRound;
+
+    private int currentRound;
 
     private EnemyManager enemyManager;
 
@@ -31,25 +33,18 @@ public class LevelManager : MonoBehaviour
 
         timeVariable = Time.time + timeBeforeRoundStarts;
 
-        round = 1;
+        currentRound = 0;
 
         enemyManager = GetComponent<EnemyManager>();
         enemyManager.SetSpawnPoints(enemySpawns);
         enemyManager.SetObjectif(Objectif);
     }
     
-    private void SpawnEnemies()
+    private void SpawnEnemies(int i)
     {
-        StartCoroutine("ISpawnEnemies");
+        enemyManager.SpawnEnemies(i);
     } 
 
-    IEnumerator ISpawnEnemies()
-    {
-        
-        enemyManager.SpawnEnemy();
-        yield return new WaitForSeconds(1f);
-        
-    }
 
     private void Update()
     {
@@ -59,8 +54,8 @@ public class LevelManager : MonoBehaviour
             {
                 isStartOfRound = false;
                 isRoundGoing = true;
+                SpawnEnemies(enemiesPerRound[currentRound]); ;
 
-                SpawnEnemies();
             }
 
         }
@@ -72,8 +67,6 @@ public class LevelManager : MonoBehaviour
                 isIntermission = false;
                 isRoundGoing = true;
 
-                SpawnEnemies();
-                return;
             }
                 
 
@@ -81,21 +74,15 @@ public class LevelManager : MonoBehaviour
 
         else if (isRoundGoing)
         {
-            /*
-            if (Enemies.enemies.Count > 0)
+            if (enemyManager.GetEnnemiesAlive() == 0)
             {
+                isIntermission = true;
+                isRoundGoing = false;
 
+                timeVariable = Time.time + timeBetweenWaves;
+                currentRound++;
             }
-
-            else
-            {*/
-            isIntermission = true;
-            isRoundGoing = false;
-
-            timeVariable = Time.time + timeBetweenWaves;
-            round++;
-
-            //}
+            
 
         }
 

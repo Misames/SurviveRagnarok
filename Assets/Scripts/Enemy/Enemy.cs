@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int damage ;
 
+    private EnemyManager _enemyManager;
+
     private Vector3 target;
 
     private void Awake()
@@ -25,11 +27,6 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         GetComponent<NavMeshAgent>().SetDestination(target);
-    }
-
-    private void initializeEnemy()
-    {
-        
     }
 
     public void takeDamage(float amount)
@@ -45,9 +42,15 @@ public class Enemy : MonoBehaviour
     {
         target = position;
     }
+    
+    public void SetEnemyManager(EnemyManager manager)
+    {
+        _enemyManager = manager;
+    }
 
     private void die()
     {
+        _enemyManager.EnemyDestroyed();
         Destroy(transform.gameObject);
     }
 
