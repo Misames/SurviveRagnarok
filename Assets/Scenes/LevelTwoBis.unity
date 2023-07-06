@@ -5851,6 +5851,7 @@ MonoBehaviour:
   timeBetweenWaves: 3
   timeBeforeRoundStarts: 0
   enemiesPerRound: 02000000030000000500000008000000
+  enemy: {fileID: 189407992}
 --- !u!114 &1262854645 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
