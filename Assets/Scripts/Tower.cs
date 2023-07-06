@@ -22,36 +22,15 @@ public class Tower : MonoBehaviour
 
     private void updateNearestEnemy()
     {
-        GameObject currentNearestEnemy=null; 
-
-        float distance = Mathf.Infinity;
-
-        foreach (GameObject enemy in Enemies.enemies)
+        if (currentTarget == null)
         {
-            if (enemy != null)
-            {
-                float _distance = (transform.position - enemy.transform.position).magnitude;
-
-                if (_distance < distance)
-                {
-                    distance = _distance;
-                    currentNearestEnemy = enemy;
-                }
-            }
-           
-        }
-
-        if (distance <= range)
-        {
-            currentTarget = currentNearestEnemy;
-        }
-        else
-        {
-            currentTarget = null;
+            int layerMask = 1 << 8;
+            RaycastHit2D target = Physics2D.CircleCast(transform.position, range, transform.forward, 0,layerMask);
+            if(target.collider != null)
+                currentTarget = target.transform.gameObject;
         }
     }
-
-
+    
     protected virtual void shoot()
     {
         Enemy enemyScript = currentTarget.GetComponent<Enemy>(); 

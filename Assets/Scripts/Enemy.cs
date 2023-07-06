@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,25 +10,23 @@ public class Enemy : MonoBehaviour
     private float speed ;
     [SerializeField]
     private float health ;
-
+        
+    [SerializeField]
     private int killReward ;
+    [SerializeField]
     private int damage ;
 
-    private GameObject targetTile;
+    private EnemyManager _enemyManager;
+
+    private Vector3 target;
 
     private void Awake()
     {
-        Enemies.enemies.Add(gameObject);
     }
     
     private void Start()
     {
-        initializeEnemy();
-    }
-
-    private void initializeEnemy()
-    {
-        targetTile = MapGenerator.startTile;
+        GetComponent<NavMeshAgent>().SetDestination(target);
     }
 
     public void takeDamage(float amount)
@@ -39,45 +38,27 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void setTarget(Vector3 position)
+    {
+        target = position;
+    }
+    
+    public void SetEnemyManager(EnemyManager manager)
+    {
+        _enemyManager = manager;
+    }
+
     private void die()
     {
-        Enemies.enemies.Remove(gameObject);
-        EnemyManager.onEnemyDestroy.Invoke();
+        _enemyManager.EnemyDestroyed();
         Destroy(transform.gameObject);
     }
 
-    private void moveEnemy()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, targetTile.transform.position, speed * Time.deltaTime);
-    }
-
- private void checkPosition()
-{
-    if (targetTile != null && targetTile != MapGenerator.endTile)
-    {
-        float distance = (transform.position - targetTile.transform.position).magnitude;
-
-        if (distance < 0.01f)
-        {
-            int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile);
-
-            if (currentIndex < MapGenerator.pathTiles.Count - 1)
-            {
-                targetTile = MapGenerator.pathTiles[currentIndex + 1];
-            }
-            else
-            {
-                // Arrivé à la fin du chemin
-                targetTile = MapGenerator.endTile;
-            }
-        }
-    }
-}
+    
 
     private void Update()
     {
-        checkPosition();
-        moveEnemy();
+        
         takeDamage(0);
         
     }
