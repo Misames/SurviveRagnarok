@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Isometric Diamond_blue
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 3625043607559282579, guid: b1ffff684cbea2b41801c4861518a951, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39520293, g: 0.7830189, b: 0.74592364, a: 1}
   m_Transform:
     e00: 1
     e01: 0
