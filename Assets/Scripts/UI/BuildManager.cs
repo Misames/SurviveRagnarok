@@ -108,10 +108,7 @@ public class BuildManager : MonoBehaviour
                     GameObject newBuilding = Instantiate(buildingObject, tilemap.GetCellCenterWorld(gridPosition), Quaternion.identity);
                     Vector3 p = newBuilding.transform.position;
                     newBuilding.transform.position = new Vector3(p.x,p.y,0);
-                    Debug.Log("new");
-                    Debug.Log(newBuilding.transform.position);
                 }
-                else Debug.Log("pas assez d'argent");
             }
         }
 
