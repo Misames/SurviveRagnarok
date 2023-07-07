@@ -1937,17 +1937,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 167946715080093790, guid: 918f05372a6df404995520e882e4c44e, type: 3}
   m_PrefabInstance: {fileID: 167946715732416080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &740863470 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7579608318465173480, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
-  m_PrefabInstance: {fileID: 5765959103687407072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &789249365 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5765959102636950894, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
@@ -6945,16 +6934,20 @@ PrefabInstance:
       objectReference: {fileID: 297206273}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildings.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildings.Array.data[0]
       value: 
-      objectReference: {fileID: 9205664664592312180, guid: c57725a6b35d913488b6541c24ee27eb, type: 3}
+      objectReference: {fileID: 7835850442284482093, guid: 62ddc52f853f1834a861ed5c02e770b5, type: 3}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildings.Array.data[1]
       value: 
-      objectReference: {fileID: 5640796404762035985, guid: 576c9d96e3c9ea841bab73ec55f53051, type: 3}
+      objectReference: {fileID: 8102182231518738121, guid: c5b9b9132440a12498c853045d54f1cd, type: 3}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: buildings.Array.data[2]
+      value: 
+      objectReference: {fileID: 9205664664592312180, guid: c57725a6b35d913488b6541c24ee27eb, type: 3}
     - target: {fileID: 985617191502328805, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -6994,7 +6987,7 @@ PrefabInstance:
     - target: {fileID: 985617191502328806, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildingHealthText
       value: 
-      objectReference: {fileID: 740863470}
+      objectReference: {fileID: 0}
     - target: {fileID: 985617191502328807, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: m_RootOrder
       value: 3
