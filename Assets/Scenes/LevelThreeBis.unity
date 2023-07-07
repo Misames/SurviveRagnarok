@@ -4367,7 +4367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 189407992}
-  grid: {fileID: 0}
+  grid: {fileID: 318225954}
   VictoryMenu: {fileID: 306364330}
   Objectif: {fileID: 321866929}
   enemySpawns:
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: ef12a8df622b2e14ca880b6deabb8635, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 219ff2f4c48627b49a5ec3ed7012c8c3, type: 2}
 --- !u!4 &1732348221
 Transform:
   m_ObjectHideFlags: 0
@@ -6087,6 +6087,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 789249365}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 318225954}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 189407992}
@@ -6205,7 +6209,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1388818165496426451, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -208.72998
+      value: -208.72997
       objectReference: {fileID: 0}
     - target: {fileID: 1494142443482771048, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
