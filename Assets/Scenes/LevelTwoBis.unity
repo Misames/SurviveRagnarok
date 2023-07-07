@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 579512100}
   - component: {fileID: 579512102}
   - component: {fileID: 579512101}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TilemapObstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6992,7 +6992,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1388818165496426451, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -208.73
+      value: -208.72998
       objectReference: {fileID: 0}
     - target: {fileID: 1494142443482771048, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
