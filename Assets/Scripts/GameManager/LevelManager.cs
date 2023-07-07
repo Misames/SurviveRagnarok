@@ -1,8 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager main;
+    public TextMeshProUGUI enemy;
+    public GameObject grid;
     public GameObject VictoryMenu;
     public Transform Objectif;
     public Transform[] enemySpawns;
@@ -37,13 +40,15 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
+        enemy.text = enemyManager.GetEnnemiesAlive().ToString();
+
         if (isStartOfRound)
         {
             if (Time.time >= timeVariable)
             {
                 isStartOfRound = false;
                 isRoundGoing = true;
-                SpawnEnemies(enemiesPerRound[currentRound]); ;
+                SpawnEnemies(enemiesPerRound[currentRound]);
             }
         }
         else if (isIntermission)
@@ -65,6 +70,7 @@ public class LevelManager : MonoBehaviour
                     isIntermission = false;
                     isRoundGoing = false;
                     VictoryMenu.SetActive(true);
+                    grid.SetActive(false);
                 }
                 else
                 {
