@@ -1,0 +1,1333 @@
+fileFormatVersion: 2
+guid: 8e3ba1306e90f22418283ed691f74af9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: telecharge_1_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 453
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14adf1d3e9da7e4c826b3b7a6bf5ceb
+      internalID: -1516490333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 450
+        width: 51
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7048087f43ece48aa9ca017dcfa907
+      internalID: 340009634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 438
+        width: 75
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db57c481b3e92e241a696403b1d9ec75
+      internalID: -1626392892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 449
+        width: 41
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be72a094c1af16e47aae34cf409f506f
+      internalID: -824985548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 451
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359e9c2a1480d1644a7bc0148c4ba133
+      internalID: 934996954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_5
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 450
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8febe2da876d640b319831265cb4eb
+      internalID: 162929802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_6
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 451
+        width: 44
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3ff050b856d5f4882115731b74eb92
+      internalID: -392212230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_7
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 450
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9962fea4a887e42ae43c02f03d5deb
+      internalID: -313097722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_8
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 450
+        width: 43
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad358b5387d133409750b95eb4c920c
+      internalID: -1177080453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 358
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72b89175ae3dca47a01ab4359f3c1ff
+      internalID: 1149112287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 362
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb4f65407b44eb46bfd5281edf7ac44
+      internalID: -1662171581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_11
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 345
+        width: 72
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14afb90d7761e594fb333c1b50bf9a1f
+      internalID: -318091284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_12
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 361
+        width: 43
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93142cd2765d00d47b0a99f128ae35c8
+      internalID: -1931941429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_13
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 359
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bea8e16c1a588a4380ef5bc91b58edc
+      internalID: 962463953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_14
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 356
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fe8217a1945d04cbf87f818e255588
+      internalID: -1402643558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_15
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 355
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93fbdfc99d1c3746a6f67177768c1a7
+      internalID: 1419741859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_16
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 357
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf37b679cf18551478dd5126ed6a0ca1
+      internalID: 950044885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_17
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 356
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee7fe2819f431349a7e7247da2048f0
+      internalID: 337670929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 266
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fc7f82fb2f2da408934cafae3334f0
+      internalID: -1336882207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 264
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab3381866d52564d8307771e5855f51
+      internalID: -1152365567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_20
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 262
+        width: 63
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be094355e411b14697ed7a3b06bbc7e
+      internalID: 1143310484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 282
+        width: 45
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34f96f5e74aac44390c24595cda6519
+      internalID: -522056186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_22
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 281
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88be8266ce8b3447947b82c40b669ea
+      internalID: -1177209282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_23
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 275
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed7913ff70edbd4c90d38bb1792c6ab
+      internalID: -1702455118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_24
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 278
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf01e911ae0cf7d458973ac7d38378c0
+      internalID: -2026542382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_25
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 273
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9324593cd20eebd4ea87b6a67c5fe4d2
+      internalID: 1759576969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_26
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 274
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8156f3f33edd84fbb4de215b7708eb
+      internalID: -1156998393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 189
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a1363553fc16846b4e5591af677d6f
+      internalID: 877121538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_28
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 184
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbf57e5341aa2e4fa0b562d17f7c362
+      internalID: 1163791117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 181
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bf522b05cc3ea469b2451101fb8bec
+      internalID: -831499737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_30
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 189
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef1e0c34b47b184091db19a0865fd47
+      internalID: -2132597160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_31
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 179
+        width: 49
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7275355b36f435458fb867224227a85
+      internalID: -392893685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 181
+        width: 58
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff6eb7b381789b478461f831a2d7b97
+      internalID: 1358591975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_33
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 180
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d396e27a208bea74b8984389e81b37bb
+      internalID: -1409648822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_34
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 181
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744d092fbf134c4408e660433d2a9889
+      internalID: -612076109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_35
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 180
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81771859292c5c45b9991d3a498aa98
+      internalID: 1120923428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_36
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 181
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42141e33dd4fde40887fa45bfbb390d
+      internalID: 111987847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_37
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 103
+        width: 39
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b33a6f0ad2eb847a9e9a48cf2528d6
+      internalID: -127645419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_38
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 103
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8240ae48052304d9d3927b0be6fee7
+      internalID: -1264111685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_39
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 102
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf048c3dc73256e41a885a0d5fe5272a
+      internalID: 1014283131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_40
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 107
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4e01ca1c9d59745a6d6b4ecbdf7de6
+      internalID: -512620344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_41
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 104
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc7c7be287c8dc49ba887ee5846ce25
+      internalID: 1995149037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_42
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 107
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adef04b77408bf24ba382b04cfa630fb
+      internalID: 1161781198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_43
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 108
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382a6d2f5650b5143a58bcdc67daaf62
+      internalID: 1016407123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_44
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 108
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f2abb23f1be8c4c888ba82602d7776
+      internalID: 1970862504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_45
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 108
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def7557f7cb0dc74698fed28f6060b6d
+      internalID: -46652017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_46
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 23
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d727c51c28e08e41ad69232de394874
+      internalID: -938121483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_47
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 41
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63947f146a888f4982c894fd56f6c7e
+      internalID: -1096623817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_48
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 10
+        width: 68
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ad031398d779c4cbd81c70cb385302
+      internalID: -924831231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_49
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 20
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7068d455381ba3c46b2dba44648bf740
+      internalID: -1501382096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_50
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 22
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5614427ccdb3d7468ab1f71bacf024d
+      internalID: 394992086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_51
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 19
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4735e2d17eb77274388945ab41b0bf68
+      internalID: -1477224512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_52
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 19
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f043d9a51432ef748b1cbdccec20e17f
+      internalID: -883347468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_53
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 19
+        width: 48
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71196e0ead7642b4aaaf63715e85db7e
+      internalID: 1824023246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: telecharge_1_54
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 18
+        width: 45
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1041f00239ae49a488a9bd6b6568d09d
+      internalID: 1764680416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      telecharge_1_0: -1516490333
+      telecharge_1_1: 340009634
+      telecharge_1_10: -1662171581
+      telecharge_1_11: -318091284
+      telecharge_1_12: -1931941429
+      telecharge_1_13: 962463953
+      telecharge_1_14: -1402643558
+      telecharge_1_15: 1419741859
+      telecharge_1_16: 950044885
+      telecharge_1_17: 337670929
+      telecharge_1_18: -1336882207
+      telecharge_1_19: -1152365567
+      telecharge_1_2: -1626392892
+      telecharge_1_20: 1143310484
+      telecharge_1_21: -522056186
+      telecharge_1_22: -1177209282
+      telecharge_1_23: -1702455118
+      telecharge_1_24: -2026542382
+      telecharge_1_25: 1759576969
+      telecharge_1_26: -1156998393
+      telecharge_1_27: 877121538
+      telecharge_1_28: 1163791117
+      telecharge_1_29: -831499737
+      telecharge_1_3: -824985548
+      telecharge_1_30: -2132597160
+      telecharge_1_31: -392893685
+      telecharge_1_32: 1358591975
+      telecharge_1_33: -1409648822
+      telecharge_1_34: -612076109
+      telecharge_1_35: 1120923428
+      telecharge_1_36: 111987847
+      telecharge_1_37: -127645419
+      telecharge_1_38: -1264111685
+      telecharge_1_39: 1014283131
+      telecharge_1_4: 934996954
+      telecharge_1_40: -512620344
+      telecharge_1_41: 1995149037
+      telecharge_1_42: 1161781198
+      telecharge_1_43: 1016407123
+      telecharge_1_44: 1970862504
+      telecharge_1_45: -46652017
+      telecharge_1_46: -938121483
+      telecharge_1_47: -1096623817
+      telecharge_1_48: -924831231
+      telecharge_1_49: -1501382096
+      telecharge_1_5: 162929802
+      telecharge_1_50: 394992086
+      telecharge_1_51: -1477224512
+      telecharge_1_52: -883347468
+      telecharge_1_53: 1824023246
+      telecharge_1_54: 1764680416
+      telecharge_1_6: -392212230
+      telecharge_1_7: -313097722
+      telecharge_1_8: -1177080453
+      telecharge_1_9: 1149112287
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
