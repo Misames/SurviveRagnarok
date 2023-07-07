@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b913fbf5b3085d4697073b4350f6731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Circle
+  Name: Sniper Tower
   Health: 100
   Cost: 50
   associatedTile: {fileID: 11400000, guid: 894603adce5b07c41872df44ba30a00c, type: 2}

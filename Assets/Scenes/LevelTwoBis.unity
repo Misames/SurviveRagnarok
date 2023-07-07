@@ -5471,9 +5471,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 6359360748633878291, guid: 34f7da98aea43234788093e7d1e98285, type: 3}
-  - {fileID: 6359360748633878291, guid: 34f7da98aea43234788093e7d1e98285, type: 3}
+  - {fileID: 2383950040845022822, guid: d49f5f6e5ef8ba5499fa62b34c897321, type: 3}
   difficultyScalingFactor: 0.75
-  timeBetweenSpawn: 0
+  timeBetweenSpawn: 0.1
 --- !u!114 &1262854644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5493,9 +5493,9 @@ MonoBehaviour:
   enemySpawns:
   - {fileID: 571825473}
   - {fileID: 702965262}
-  timeBetweenWaves: 3
-  timeBeforeRoundStarts: 0
-  enemiesPerRound: 02000000030000000500000008000000
+  timeBetweenWaves: 5
+  timeBeforeRoundStarts: 10
+  enemiesPerRound: 140000001e0000002800000032000000
 --- !u!114 &1262854645 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}

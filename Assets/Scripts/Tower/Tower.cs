@@ -29,6 +29,14 @@ public class Tower : MonoBehaviour
 
     private void updateNearestEnemy()
     {
+        if (currentTarget != null)
+        {
+            float dist = Vector3.Distance(transform.position, currentTarget.transform.position);
+            if (dist > range)
+            {
+                currentTarget = null;
+            }
+        }
         if (currentTarget == null)
         {
             int layerMask = 1 << 8;

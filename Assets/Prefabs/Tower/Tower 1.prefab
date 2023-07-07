@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b913fbf5b3085d4697073b4350f6731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Circle
+  Name: Normal Tower
   Health: 100
   Cost: 50
   associatedTile: {fileID: 11400000, guid: 2723177f08adf2c4687c3df8c403a163, type: 2}
@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a138cb6d37bbe49a29a54dc67f100a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
-  damage: 25
-  fireRate: 0.5
+  range: 10
+  damage: 15
+  fireRate: 0.7
   bullet: {fileID: 522719430014158135, guid: ff09bd3ec6f239b4b856470291261359, type: 3}
   projectileSource: {fileID: 4522645083958126262}
