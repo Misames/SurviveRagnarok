@@ -18,6 +18,9 @@ public class BuildManager : MonoBehaviour
     public TextMeshProUGUI buildingNameText;
     public TextMeshProUGUI buildingHealthText;
     public TextMeshProUGUI buildingCostText;
+    public TextMeshProUGUI buildingRangeText;
+    public TextMeshProUGUI buildingDamageText;
+    public TextMeshProUGUI buildingFireRateText;
 
     private void Start()
     {
@@ -70,12 +73,15 @@ public class BuildManager : MonoBehaviour
         if (index >= 0 && index < GameManager.Instance.buildings.Length)
         {
             Buildings building = GameManager.Instance.buildings[index].GetComponent<Buildings>();
+            Tower tower = GameManager.Instance.buildings[index].GetComponent<Tower>();
 
             // Mettez à jour le panneau d'informations avec les détails du bâtiment survolé
             buildingNameText.text = building.Name;
             buildingImage.sprite = building.associatedTile.sprite;
-            buildingHealthText.text = "Health: " + building.Health.ToString();
-            buildingCostText.text = "Cost: " + building.Cost.ToString();
+            buildingCostText.text = "Coût: " + building.Cost.ToString();
+            buildingDamageText.text = "Dégat: " + tower.damage.ToString();
+            buildingRangeText.text = "Portée: " + tower.range.ToString();
+            buildingFireRateText.text = "Freq. Tir: " + tower.fireRate.ToString();
 
             // Affichez le panneau d'informations
             buildingInfoPanel.SetActive(true);

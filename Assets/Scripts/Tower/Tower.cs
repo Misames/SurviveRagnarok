@@ -6,11 +6,11 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField]
-    private float range;
+    public float range;
     [SerializeField]
-    private int damage;
+    public int damage;
     [SerializeField]
-    private float fireRate;
+    public float fireRate;
     
     [SerializeField]
     private GameObject bullet;
