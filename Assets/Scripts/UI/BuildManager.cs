@@ -93,12 +93,16 @@ public class BuildManager : MonoBehaviour
         Vector3Int gridPosition = tilemap.WorldToCell(position);
         
         int layerMask = 1 << 7;
-        Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-        RaycastHit hit;
-        bool found = Physics.Raycast(mouseRay, out hit, Mathf.Infinity, layerMask);
+        
+        
 
         if (Input.GetMouseButtonDown(0))
         {
+            Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+            RaycastHit hit;
+            bool found = Physics.Raycast(mouseRay, out hit, Mathf.Infinity, layerMask);
+            Debug.Log("hit " + found);
+            //Debug.Log(hit.transform.position);
             if (tilemap.HasTile(gridPosition))
             {
                 if (gameManager.CanAfford(build.Cost) && found == false)
@@ -108,6 +112,8 @@ public class BuildManager : MonoBehaviour
                     GameObject newBuilding = Instantiate(buildingObject, tilemap.GetCellCenterWorld(gridPosition), Quaternion.identity);
                     Vector3 p = newBuilding.transform.position;
                     newBuilding.transform.position = new Vector3(p.x,p.y,0);
+                    Debug.Log("new");
+                    Debug.Log(newBuilding.transform.position);
                 }
                 else Debug.Log("pas assez d'argent");
             }
@@ -115,6 +121,12 @@ public class BuildManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+            RaycastHit hit;
+            bool found = Physics.Raycast(mouseRay, out hit, Mathf.Infinity, layerMask);
+            Debug.Log("hit " + found);
+            Debug.Log(hit.transform.position);
+            
             if (tilemap.HasTile(gridPosition) && found == true)
             {
                 Destroy(hit.transform.root.gameObject);
