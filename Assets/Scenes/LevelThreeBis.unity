@@ -4226,7 +4226,7 @@ MonoBehaviour:
   - {fileID: 2383950040845022822, guid: d49f5f6e5ef8ba5499fa62b34c897321, type: 3}
   - {fileID: 4602156403651452493, guid: 029cb154390bf0f4e905f53d3fd8884e, type: 3}
   difficultyScalingFactor: 0.75
-  timeBetweenSpawn: 0.1
+  timeBetweenSpawn: 0.2
 --- !u!114 &1262854644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4248,7 +4248,7 @@ MonoBehaviour:
   - {fileID: 872303132}
   timeBetweenWaves: 5
   timeBeforeRoundStarts: 10
-  enemiesPerRound: 0a000000140000002800000050000000
+  enemiesPerRound: 0a00000014000000280000005000000064000000
 --- !u!114 &1262854645 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
@@ -6063,6 +6063,10 @@ PrefabInstance:
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 297206273}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: startingGold
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildings.Array.size
       value: 4
