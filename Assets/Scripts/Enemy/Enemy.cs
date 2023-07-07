@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float health;
     [SerializeField]
-    private int killReward;
+    public uint killReward;
     [SerializeField]
     public uint damage;
     private EnemyManager enemyManager;
@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
     private void die()
     {
         enemyManager.EnemyDestroyed();
+        GameManager.Instance.EarnGold(killReward);
         Destroy(transform.gameObject);
     }
 }
