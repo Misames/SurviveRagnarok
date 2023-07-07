@@ -1,29 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
-    private float speed ;
+    private float speed;
     [SerializeField]
-    private float health ;
-        
+    private float health;
     [SerializeField]
-    private int killReward ;
+    public uint killReward;
     [SerializeField]
-    private int damage ;
-
-    private EnemyManager _enemyManager;
-
+    public int damage;
+    private EnemyManager enemyManager;
     private Vector3 target;
 
-    private void Awake()
-    {
-    }
-    
     private void Start()
     {
         GetComponent<NavMeshAgent>().SetDestination(target);
@@ -32,35 +22,23 @@ public class Enemy : MonoBehaviour
     public void takeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0)
-        {
-            die();
-        }
+        if (health <= 0) die();
     }
 
     public void setTarget(Vector3 position)
     {
         target = position;
     }
-    
+
     public void SetEnemyManager(EnemyManager manager)
     {
-        _enemyManager = manager;
+        enemyManager = manager;
     }
 
     private void die()
     {
-        _enemyManager.EnemyDestroyed();
+        enemyManager.EnemyDestroyed();
+        GameManager.Instance.EarnGold(killReward);
         Destroy(transform.gameObject);
     }
-
-    
-
-    private void Update()
-    {
-        
-        takeDamage(0);
-        
-    }
 }
-

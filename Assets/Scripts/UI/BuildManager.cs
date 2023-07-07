@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,12 +18,16 @@ public class BuildManager : MonoBehaviour
     public TextMeshProUGUI buildingNameText;
     public TextMeshProUGUI buildingHealthText;
     public TextMeshProUGUI buildingCostText;
+    public TextMeshProUGUI buildingRangeText;
+    public TextMeshProUGUI buildingDamageText;
+    public TextMeshProUGUI buildingFireRateText;
 
     private void Start()
     {
         int i = 0;
-        foreach (Buildings building in GameManager.Instance.buildings)
+        foreach (GameObject buildingObject in GameManager.Instance.buildings)
         {
+            Buildings building = buildingObject.GetComponent<Buildings>();
             GameObject UITile = new GameObject("UI Tile");
 
             UITile.transform.parent = tileGridUI;
@@ -67,13 +72,16 @@ public class BuildManager : MonoBehaviour
         // Vérifiez si l'index est valide
         if (index >= 0 && index < GameManager.Instance.buildings.Length)
         {
-            Buildings building = GameManager.Instance.buildings[index];
+            Buildings building = GameManager.Instance.buildings[index].GetComponent<Buildings>();
+            Tower tower = GameManager.Instance.buildings[index].GetComponent<Tower>();
 
             // Mettez à jour le panneau d'informations avec les détails du bâtiment survolé
             buildingNameText.text = building.Name;
             buildingImage.sprite = building.associatedTile.sprite;
-            buildingHealthText.text = "Health: " + building.Health.ToString();
-            buildingCostText.text = "Cost: " + building.Cost.ToString();
+            buildingCostText.text = "Coût: " + building.Cost.ToString();
+            buildingDamageText.text = "Dégat: " + tower.damage.ToString();
+            buildingRangeText.text = "Portée: " + tower.range.ToString();
+            buildingFireRateText.text = "Freq. Tir: " + tower.fireRate.ToString();
 
             // Affichez le panneau d'informations
             buildingInfoPanel.SetActive(true);
@@ -83,33 +91,44 @@ public class BuildManager : MonoBehaviour
     private void Update()
     {
         GameManager gameManager = GameManager.Instance;
-        Buildings build = gameManager.buildings[selectedTile];
+        GameObject buildingObject = gameManager.buildings[selectedTile];
+        Buildings build = buildingObject.GetComponent<Buildings>();
 
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int gridPosition = tilemap.WorldToCell(position);
+        
+        int layerMask = 1 << 7;
+        
+        
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(tilemap.HasTile(gridPosition));
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position,Mathf.Infinity,layerMask);
+            bool found = hit.collider != null;
+            
             if (tilemap.HasTile(gridPosition))
             {
-
-                if (gameManager.CanAfford(build.Cost))
+                if (gameManager.CanAfford(build.Cost) && found == false)
                 {
                     gameManager.SpendGold(build.Cost);
-                    tilemap.SetTile(gridPosition, build.associatedTile);
+                    GameObject newBuilding = Instantiate(buildingObject, tilemap.GetCellCenterWorld(gridPosition), Quaternion.identity);
+                    Vector3 p = newBuilding.transform.position;
+                    newBuilding.transform.position = new Vector3(p.x,p.y,0);
                 }
-                else Debug.Log("pas assez d'argent");
             }
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            if (tilemap.HasTile(gridPosition))
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position,Mathf.Infinity,layerMask);
+            bool found = hit.collider != null;
+
+            if (tilemap.HasTile(gridPosition) && found == true)
             {
-                tilemap.SetTile(gridPosition, groundTile);
+                Destroy(hit.transform.root.gameObject);
                 gameManager.EarnGold(build.Cost);
             }
+
         }
     }
 

@@ -192,6 +192,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -267,8 +280,8 @@ TextureImporter:
         y: 768
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: -4.064102, y: 1.3888884}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1445,6 +1458,63 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      basic_ground_tiles_0_0: -6956694890673502079
+      basic_ground_tiles_0_1: 7369830437833475536
+      basic_ground_tiles_0_10: -1844829706168296779
+      basic_ground_tiles_0_11: 1610810636855075866
+      basic_ground_tiles_0_12: 2954712772204356208
+      basic_ground_tiles_0_13: 1426434883719438401
+      basic_ground_tiles_0_14: 5477635137329846909
+      basic_ground_tiles_0_15: 7021657127585963965
+      basic_ground_tiles_0_16: -8896283986341352716
+      basic_ground_tiles_0_17: 1306103760042453219
+      basic_ground_tiles_0_18: -2557220019461474045
+      basic_ground_tiles_0_19: -1904787708816882062
+      basic_ground_tiles_0_2: 2131012777703385538
+      basic_ground_tiles_0_20: 3999848256504585139
+      basic_ground_tiles_0_21: -6596261092435325294
+      basic_ground_tiles_0_22: -961057064583797865
+      basic_ground_tiles_0_23: -8819515073526757737
+      basic_ground_tiles_0_24: -7141705573424859858
+      basic_ground_tiles_0_25: -545097015940836012
+      basic_ground_tiles_0_26: 8141232575143544655
+      basic_ground_tiles_0_27: 4368850468856597364
+      basic_ground_tiles_0_28: -5203970701066820149
+      basic_ground_tiles_0_29: 1364063760529867258
+      basic_ground_tiles_0_3: -3668665033425596490
+      basic_ground_tiles_0_30: -1967105050784198241
+      basic_ground_tiles_0_31: 3715229955454223353
+      basic_ground_tiles_0_32: -5019859388734485587
+      basic_ground_tiles_0_33: -986682239795564156
+      basic_ground_tiles_0_34: 3715136514619712035
+      basic_ground_tiles_0_35: 1947852248495599543
+      basic_ground_tiles_0_36: 1745038116928129947
+      basic_ground_tiles_0_37: 5758115247119615629
+      basic_ground_tiles_0_38: -310988928837099781
+      basic_ground_tiles_0_39: -1024758292826718652
+      basic_ground_tiles_0_4: 2412731830873332703
+      basic_ground_tiles_0_40: -5891794915432353517
+      basic_ground_tiles_0_41: -7726348556418825110
+      basic_ground_tiles_0_42: 3092605025856424387
+      basic_ground_tiles_0_43: -4016905457527824416
+      basic_ground_tiles_0_44: -244704751006206787
+      basic_ground_tiles_0_45: -1858747169014148196
+      basic_ground_tiles_0_46: -4945995336557292421
+      basic_ground_tiles_0_47: 6301125331115994369
+      basic_ground_tiles_0_48: -3356179824990791899
+      basic_ground_tiles_0_49: -5953661332259341826
+      basic_ground_tiles_0_5: -5501366959233197061
+      basic_ground_tiles_0_50: -2334912383812488560
+      basic_ground_tiles_0_51: 3850324090392376274
+      basic_ground_tiles_0_52: -5847961073580886305
+      basic_ground_tiles_0_53: -2481892420753497327
+      basic_ground_tiles_0_54: -7280694691040232787
+      basic_ground_tiles_0_55: 6110719901234534582
+      basic_ground_tiles_0_6: -65450183527720279
+      basic_ground_tiles_0_7: -1553643754207549557
+      basic_ground_tiles_0_8: -946945354791512838
+      basic_ground_tiles_0_9: 3268062302297598020
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

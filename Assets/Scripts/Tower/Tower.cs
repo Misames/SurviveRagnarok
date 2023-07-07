@@ -1,19 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
     [SerializeField]
-    private float range;
+    public float range;
     [SerializeField]
-    private float damage;
+    public int damage;
     [SerializeField]
-    private float fireRate;
+    public float fireRate;
+    
+    [SerializeField]
+    private GameObject bullet;
+    [SerializeField]
+    private Transform projectileSource;
+    
 
     private float nextTimeToFire ;
 
-    public GameObject currentTarget;
+    private GameObject currentTarget;
 
     private void Start()
     {
@@ -22,6 +29,14 @@ public class Tower : MonoBehaviour
 
     private void updateNearestEnemy()
     {
+        if (currentTarget != null)
+        {
+            float dist = Vector3.Distance(transform.position, currentTarget.transform.position);
+            if (dist > range)
+            {
+                currentTarget = null;
+            }
+        }
         if (currentTarget == null)
         {
             int layerMask = 1 << 8;
@@ -33,8 +48,11 @@ public class Tower : MonoBehaviour
     
     protected virtual void shoot()
     {
-        Enemy enemyScript = currentTarget.GetComponent<Enemy>(); 
-        enemyScript.takeDamage(damage);
+        projectileSource.LookAt(currentTarget.transform.position);
+        GameObject newBullet = Instantiate(bullet, projectileSource.position, Quaternion.identity);
+        
+        newBullet.GetComponent<Bullet>().damage = damage;
+        newBullet.GetComponent<Bullet>().lookAtRotation = Instantiate(projectileSource.transform);
     }
 
     private void Update()
