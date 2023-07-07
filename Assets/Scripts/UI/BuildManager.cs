@@ -88,7 +88,6 @@ public class BuildManager : MonoBehaviour
         GameObject buildingObject = gameManager.buildings[selectedTile];
         Buildings build = buildingObject.GetComponent<Buildings>();
 
-        Vector3 camPos = Camera.main.transform.position;
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int gridPosition = tilemap.WorldToCell(position);
         
@@ -98,17 +97,14 @@ public class BuildManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-            RaycastHit hit;
-            bool found = Physics.Raycast(mouseRay, out hit, Mathf.Infinity, layerMask);
-            Debug.Log("hit " + found);
-            //Debug.Log(hit.transform.position);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position,Mathf.Infinity,layerMask);
+            bool found = hit.collider != null;
+            
             if (tilemap.HasTile(gridPosition))
             {
                 if (gameManager.CanAfford(build.Cost) && found == false)
                 {
                     gameManager.SpendGold(build.Cost);
-                    //tilemap.SetTile(gridPosition, build.associatedTile);
                     GameObject newBuilding = Instantiate(buildingObject, tilemap.GetCellCenterWorld(gridPosition), Quaternion.identity);
                     Vector3 p = newBuilding.transform.position;
                     newBuilding.transform.position = new Vector3(p.x,p.y,0);
@@ -121,12 +117,9 @@ public class BuildManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-            RaycastHit hit;
-            bool found = Physics.Raycast(mouseRay, out hit, Mathf.Infinity, layerMask);
-            Debug.Log("hit " + found);
-            Debug.Log(hit.transform.position);
-            
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position,Mathf.Infinity,layerMask);
+            bool found = hit.collider != null;
+
             if (tilemap.HasTile(gridPosition) && found == true)
             {
                 Destroy(hit.transform.root.gameObject);
