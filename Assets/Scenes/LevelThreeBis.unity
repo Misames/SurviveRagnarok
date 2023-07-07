@@ -4366,6 +4366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a3c8c2948c7d04da946c8209962ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 189407992}
+  grid: {fileID: 318225954}
   VictoryMenu: {fileID: 306364330}
   Objectif: {fileID: 321866929}
   enemySpawns:
@@ -6084,6 +6086,10 @@ PrefabInstance:
       propertyPath: gold
       value: 
       objectReference: {fileID: 789249365}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 318225954}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: enemy
       value: 
