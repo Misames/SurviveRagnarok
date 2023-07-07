@@ -5,6 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager main;
     public TextMeshProUGUI enemy;
+    public GameObject grid;
     public GameObject VictoryMenu;
     public Transform Objectif;
     public Transform[] enemySpawns;
@@ -69,6 +70,7 @@ public class LevelManager : MonoBehaviour
                     isIntermission = false;
                     isRoundGoing = false;
                     VictoryMenu.SetActive(true);
+                    grid.SetActive(false);
                 }
                 else
                 {

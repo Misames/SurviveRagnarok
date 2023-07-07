@@ -5,6 +5,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public GameObject GameOverMenu;
+    public GameObject grid;
     public TextMeshProUGUI health;
     public TextMeshProUGUI gold;
     public float preparationTime = 5f; // Temps de préparation avant la première vague
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         if (playerHealth <= 0)
         {
             GameOverMenu.SetActive(true);
+            grid.SetActive(false);
             Time.timeScale = 0;
         }
     }
