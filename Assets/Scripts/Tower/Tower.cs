@@ -44,8 +44,7 @@ public class Tower : MonoBehaviour
         GameObject newBullet = Instantiate(bullet, projectileSource.position, Quaternion.identity);
         
         newBullet.GetComponent<Bullet>().damage = damage;
-        newBullet.GetComponent<Bullet>().lookAtRotation = projectileSource.transform;
-
+        newBullet.GetComponent<Bullet>().lookAtRotation = Instantiate(projectileSource.transform);
     }
 
     private void Update()
