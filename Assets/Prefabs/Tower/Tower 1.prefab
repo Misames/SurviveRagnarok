@@ -239,6 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   damage: 25
-  fireRate: 100
+  fireRate: 1
   bullet: {fileID: 522719430014158135, guid: ff09bd3ec6f239b4b856470291261359, type: 3}
   projectileSource: {fileID: 4522645083958126262}
