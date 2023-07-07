@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverMenu;
     public TextMeshProUGUI health;
     public TextMeshProUGUI gold;
-    public TextMeshProUGUI enemy;
     public float preparationTime = 5f; // Temps de préparation avant la première vague
     public float timeBetweenWaves = 10f; // Temps d'attente entre les vagues
     public uint startingGold = 100; // Or de départ du joueur
@@ -15,7 +14,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] buildings; // Liste de batiment disponible pour le niveau actuel
     private uint currentWave = 0; // Vague actuelle
     private uint currentGold; // Or actuel du joueur
-    private uint currentEnemy = 0; // Nombre d'ennemies actuellement en vie
 
     // Singleton pattern pour accéder au GameManager depuis d'autres scripts
     private static GameManager instance;
@@ -37,7 +35,6 @@ public class GameManager : MonoBehaviour
         currentGold = startingGold;
         gold.text = currentGold.ToString();
         health.text = playerHealth.ToString();
-        enemy.text = currentEnemy.ToString();
         Time.timeScale = 1;
     }
 
