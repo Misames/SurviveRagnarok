@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     public uint killReward;
     [SerializeField]
-    public uint damage;
+    public int damage;
     private EnemyManager enemyManager;
     private Vector3 target;
 
