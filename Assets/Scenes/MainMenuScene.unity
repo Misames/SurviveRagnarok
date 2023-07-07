@@ -398,8 +398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a99f0e27519f64dada148f95c36808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDesactivate: []
-  lorePanel: {fileID: 0}
+  objectToDesactivate:
+  - {fileID: 1807406825}
+  - {fileID: 1123592339}
+  - {fileID: 1838435400}
+  - {fileID: 1710243476}
+  lorePanel: {fileID: 179214546}
 --- !u!1 &451265529
 GameObject:
   m_ObjectHideFlags: 0
