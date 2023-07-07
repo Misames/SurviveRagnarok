@@ -104,8 +104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   health: 80
-  killReward: 0
-  damage: 0
+  killReward: 30
+  damage: 10
 --- !u!61 &4550420059760897548
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public int damage;
     public Transform lookAtRotation;
+
     private void Start()
     {
         Destroy(gameObject, 10f);
@@ -15,7 +16,6 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemy>().takeDamage(damage);
             Destroy(gameObject);
-
         }
     }
 
