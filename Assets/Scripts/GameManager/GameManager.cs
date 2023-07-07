@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public float preparationTime = 5f; // Temps de préparation avant la première vague
     public float timeBetweenWaves = 10f; // Temps d'attente entre les vagues
     public uint startingGold = 100; // Or de départ du joueur
-    public uint playerHealth = 100; // Points de vie du joueur
+    public int playerHealth = 100; // Points de vie du joueur
     public GameObject[] buildings; // Liste de batiment disponible pour le niveau actuel
     private uint currentWave = 0; // Vague actuelle
     private uint currentGold; // Or actuel du joueur
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         gold.text = currentGold.ToString();
     }
 
-    public void ReducePlayerHealth(uint damage)
+    public void ReducePlayerHealth(int damage)
     {
         // Réduit les points de vie du joueur
         playerHealth -= damage;
