@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -5,11 +8,19 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private float range;
     [SerializeField]
-    private float damage;
+    private int damage;
     [SerializeField]
     private float fireRate;
-    private float nextTimeToFire;
-    public GameObject currentTarget;
+    
+    [SerializeField]
+    private GameObject bullet;
+    [SerializeField]
+    private Transform projectileSource;
+    
+
+    private float nextTimeToFire ;
+
+    private GameObject currentTarget;
 
     private void Start()
     {
@@ -21,16 +32,20 @@ public class Tower : MonoBehaviour
         if (currentTarget == null)
         {
             int layerMask = 1 << 8;
-            RaycastHit2D target = Physics2D.CircleCast(transform.position, range, transform.forward, 0, layerMask);
-            if (target.collider != null)
+            RaycastHit2D target = Physics2D.CircleCast(transform.position, range, transform.forward, 0,layerMask);
+            if(target.collider != null)
                 currentTarget = target.transform.gameObject;
         }
     }
-
+    
     protected virtual void shoot()
     {
-        Enemy enemyScript = currentTarget.GetComponent<Enemy>();
-        enemyScript.takeDamage(damage);
+        projectileSource.LookAt(currentTarget.transform.position);
+        GameObject newBullet = Instantiate(bullet, projectileSource.position, Quaternion.identity);
+        
+        newBullet.GetComponent<Bullet>().damage = damage;
+        newBullet.GetComponent<Bullet>().lookAtRotation = projectileSource.transform;
+
     }
 
     private void Update()

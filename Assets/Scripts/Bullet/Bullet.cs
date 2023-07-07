@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int damage;
+    public Transform lookAtRotation;
     private void Start()
     {
         Destroy(gameObject, 10f);
@@ -9,11 +11,16 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.layer == 8)
+        {
+            collision.gameObject.GetComponent<Enemy>().takeDamage(damage);
+            Destroy(gameObject);
+
+        }
     }
 
     private void Update()
     {
-        transform.position += transform.right * 0.25f;
+        transform.position += lookAtRotation.forward * 0.1f;
     }
 }

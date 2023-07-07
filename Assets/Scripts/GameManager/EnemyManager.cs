@@ -43,7 +43,8 @@ public class EnemyManager : MonoBehaviour
         int randomEnemyType = Random.Range(0, enemyPrefabs.Length);
         GameObject prefabToSpawn = enemyPrefabs[randomEnemyType];
         int randomSpawn = Random.Range(0, enemySpawns.Length);
-        GameObject newEnemy = Instantiate(prefabToSpawn, enemySpawns[randomSpawn].position, Quaternion.identity);
+        Vector3 spawnPos = enemySpawns[randomSpawn].position;
+        GameObject newEnemy = Instantiate(prefabToSpawn,new Vector3(spawnPos.x,spawnPos.y,0) , Quaternion.identity);
         newEnemy.GetComponent<Enemy>().setTarget(enemyObjectif.position);
         newEnemy.GetComponent<Enemy>().SetEnemyManager(GetComponent<EnemyManager>());
         enemiesAlive++;

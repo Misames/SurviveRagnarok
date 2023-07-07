@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,8 +22,9 @@ public class BuildManager : MonoBehaviour
     private void Start()
     {
         int i = 0;
-        foreach (Buildings building in GameManager.Instance.buildings)
+        foreach (GameObject buildingObject in GameManager.Instance.buildings)
         {
+            Buildings building = buildingObject.GetComponent<Buildings>();
             GameObject UITile = new GameObject("UI Tile");
 
             UITile.transform.parent = tileGridUI;
@@ -67,7 +69,7 @@ public class BuildManager : MonoBehaviour
         // Vérifiez si l'index est valide
         if (index >= 0 && index < GameManager.Instance.buildings.Length)
         {
-            Buildings building = GameManager.Instance.buildings[index];
+            Buildings building = GameManager.Instance.buildings[index].GetComponent<Buildings>();
 
             // Mettez à jour le panneau d'informations avec les détails du bâtiment survolé
             buildingNameText.text = building.Name;
@@ -83,21 +85,29 @@ public class BuildManager : MonoBehaviour
     private void Update()
     {
         GameManager gameManager = GameManager.Instance;
-        Buildings build = gameManager.buildings[selectedTile];
+        GameObject buildingObject = gameManager.buildings[selectedTile];
+        Buildings build = buildingObject.GetComponent<Buildings>();
 
+        Vector3 camPos = Camera.main.transform.position;
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int gridPosition = tilemap.WorldToCell(position);
+        
+        int layerMask = 1 << 7;
+        Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+        RaycastHit hit;
+        bool found = Physics.Raycast(mouseRay, out hit, Mathf.Infinity, layerMask);
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(tilemap.HasTile(gridPosition));
             if (tilemap.HasTile(gridPosition))
             {
-
-                if (gameManager.CanAfford(build.Cost))
+                if (gameManager.CanAfford(build.Cost) && found == false)
                 {
                     gameManager.SpendGold(build.Cost);
-                    tilemap.SetTile(gridPosition, build.associatedTile);
+                    //tilemap.SetTile(gridPosition, build.associatedTile);
+                    GameObject newBuilding = Instantiate(buildingObject, tilemap.GetCellCenterWorld(gridPosition), Quaternion.identity);
+                    Vector3 p = newBuilding.transform.position;
+                    newBuilding.transform.position = new Vector3(p.x,p.y,0);
                 }
                 else Debug.Log("pas assez d'argent");
             }
@@ -105,11 +115,12 @@ public class BuildManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            if (tilemap.HasTile(gridPosition))
+            if (tilemap.HasTile(gridPosition) && found == true)
             {
-                tilemap.SetTile(gridPosition, groundTile);
+                Destroy(hit.transform.root.gameObject);
                 gameManager.EarnGold(build.Cost);
             }
+
         }
     }
 
