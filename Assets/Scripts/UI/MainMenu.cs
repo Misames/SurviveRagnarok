@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void ShowLorePanel()
     {
-        foreach(var obj in objectToDesactivate)
+        foreach (var obj in objectToDesactivate)
         {
             obj.SetActive(false);
         }

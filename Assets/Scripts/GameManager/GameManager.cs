@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public uint startingGold = 100; // Or de départ du joueur
     public int playerHealth = 100; // Points de vie du joueur
     public GameObject[] buildings; // Liste de batiment disponible pour le niveau actuel
-    private uint currentWave = 0; // Vague actuelle
     private uint currentGold; // Or actuel du joueur
 
     // Singleton pattern pour accéder au GameManager depuis d'autres scripts

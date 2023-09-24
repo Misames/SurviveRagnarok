@@ -15,7 +15,6 @@ public class LevelManager : MonoBehaviour
     private bool isRoundGoing;
     private bool isIntermission;
     private bool isStartOfRound;
-    private bool isLevelFinished;
     public int[] enemiesPerRound;
     private int currentRound;
     private EnemyManager enemyManager;
@@ -25,7 +24,6 @@ public class LevelManager : MonoBehaviour
         isRoundGoing = false;
         isStartOfRound = true;
         isIntermission = false;
-        isLevelFinished = false;
         timeVariable = Time.time + timeBeforeRoundStarts;
         currentRound = 0;
         enemyManager = GetComponent<EnemyManager>();
@@ -66,7 +64,6 @@ public class LevelManager : MonoBehaviour
                 currentRound++;
                 if (currentRound == enemiesPerRound.Length)
                 {
-                    isLevelFinished = true;
                     isIntermission = false;
                     isRoundGoing = false;
                     VictoryMenu.SetActive(true);

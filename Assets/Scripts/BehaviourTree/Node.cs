@@ -4,9 +4,9 @@ namespace BehaviorTree
 {
     public enum NodeState
     {
-        RUNNING,
         SUCCESS,
-        FAILURE
+        FAILURE,
+        RUNNING
     }
 
     public class Node
@@ -52,6 +52,7 @@ namespace BehaviorTree
                         return state;
                 }
             }
+
             return state;
         }
     }

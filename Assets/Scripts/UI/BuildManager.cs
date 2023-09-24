@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -96,16 +95,16 @@ public class BuildManager : MonoBehaviour
 
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int gridPosition = tilemap.WorldToCell(position);
-        
+
         int layerMask = 1 << 7;
-        
-        
+
+
 
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position,Mathf.Infinity,layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position, Mathf.Infinity, layerMask);
             bool found = hit.collider != null;
-            
+
             if (tilemap.HasTile(gridPosition))
             {
                 if (gameManager.CanAfford(build.Cost) && found == false)
@@ -113,14 +112,14 @@ public class BuildManager : MonoBehaviour
                     gameManager.SpendGold(build.Cost);
                     GameObject newBuilding = Instantiate(buildingObject, tilemap.GetCellCenterWorld(gridPosition), Quaternion.identity);
                     Vector3 p = newBuilding.transform.position;
-                    newBuilding.transform.position = new Vector3(p.x,p.y,0);
+                    newBuilding.transform.position = new Vector3(p.x, p.y, 0);
                 }
             }
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position,Mathf.Infinity,layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position, Mathf.Infinity, layerMask);
             bool found = hit.collider != null;
 
             if (tilemap.HasTile(gridPosition) && found == true)
@@ -128,7 +127,6 @@ public class BuildManager : MonoBehaviour
                 Destroy(hit.transform.root.gameObject);
                 gameManager.EarnGold(build.Cost);
             }
-
         }
     }
 
