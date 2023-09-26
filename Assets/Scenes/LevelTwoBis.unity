@@ -5461,7 +5461,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 6359360748633878291, guid: 34f7da98aea43234788093e7d1e98285, type: 3}
   - {fileID: 2383950040845022822, guid: d49f5f6e5ef8ba5499fa62b34c897321, type: 3}
-  difficultyScalingFactor: 0.75
+  enemySpawns: []
   timeBetweenSpawn: 0.1
 --- !u!114 &1262854644
 MonoBehaviour:
@@ -5477,8 +5477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 189407992}
   grid: {fileID: 318225954}
-  VictoryMenu: {fileID: 306364330}
-  Objectif: {fileID: 321866929}
+  victoryMenu: {fileID: 306364330}
+  objectif: {fileID: 321866929}
   enemySpawns:
   - {fileID: 571825473}
   - {fileID: 702965262}
@@ -6930,6 +6930,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: GameOverMenu
+      value: 
+      objectReference: {fileID: 297206273}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: gameOverMenu
       value: 
       objectReference: {fileID: 297206273}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}

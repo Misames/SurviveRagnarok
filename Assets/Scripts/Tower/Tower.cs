@@ -24,6 +24,7 @@ public class Tower : MonoBehaviour
             float dist = Vector3.Distance(transform.position, currentTarget.transform.position);
             if (dist > range) currentTarget = null;
         }
+
         if (currentTarget == null)
         {
             int layerMask = 1 << 8;

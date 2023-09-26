@@ -98,8 +98,6 @@ public class BuildManager : MonoBehaviour
 
         int layerMask = 1 << 7;
 
-
-
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, position - Camera.main.transform.position, Mathf.Infinity, layerMask);

@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objectif (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4180451531519013245, guid: 8801161906feeaf4f9070927f2cde7f1, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1262854643}
     - target: {fileID: 4180451531519013247, guid: 8801161906feeaf4f9070927f2cde7f1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4225,7 +4229,7 @@ MonoBehaviour:
   - {fileID: 6359360748633878291, guid: 34f7da98aea43234788093e7d1e98285, type: 3}
   - {fileID: 2383950040845022822, guid: d49f5f6e5ef8ba5499fa62b34c897321, type: 3}
   - {fileID: 4602156403651452493, guid: 029cb154390bf0f4e905f53d3fd8884e, type: 3}
-  difficultyScalingFactor: 0.75
+  enemySpawns: []
   timeBetweenSpawn: 0.2
 --- !u!114 &1262854644
 MonoBehaviour:
@@ -4241,8 +4245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 189407992}
   grid: {fileID: 318225954}
-  VictoryMenu: {fileID: 306364330}
-  Objectif: {fileID: 72124261}
+  victoryMenu: {fileID: 306364330}
+  objectif: {fileID: 72124261}
   enemySpawns:
   - {fileID: 2006879109}
   - {fileID: 872303132}
@@ -6064,6 +6068,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 297206273}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: gameOverMenu
+      value: 
+      objectReference: {fileID: 297206273}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: startingGold
       value: 500
       objectReference: {fileID: 0}
@@ -6134,7 +6142,7 @@ PrefabInstance:
     - target: {fileID: 985617191502328806, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildingHealthText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1848760736}
     - target: {fileID: 985617191502328806, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: buildingFireRateText
       value: 

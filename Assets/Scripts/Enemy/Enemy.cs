@@ -11,13 +11,14 @@ public class Enemy : MonoBehaviour
     public int damage;
     private EnemyManager enemyManager;
     private Vector3 target;
+    public bool collided;
 
     private void Start()
     {
         GetComponent<NavMeshAgent>().SetDestination(target);
     }
 
-    public void takeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
         if (health <= 0) Die();

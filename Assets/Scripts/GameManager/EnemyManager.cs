@@ -14,7 +14,7 @@ public class EnemyManager : MonoBehaviour
 
     public void EnemyDestroyed()
     {
-        enemiesAlive--;
+        enemiesAlive -= 1;
     }
 
     private void Update()
@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour
         if (enemiesLeftToSpawn > 0)
         {
             SpawnEnemy();
-            enemiesLeftToSpawn--;
+            enemiesLeftToSpawn -= 1;
         }
     }
 
