@@ -4,7 +4,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject GameOverMenu;
+    public GameObject gameOverMenu;
     public GameObject grid;
     public TextMeshProUGUI health;
     public TextMeshProUGUI gold;
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         // Vérifie si le joueur a perdu
         if (playerHealth <= 0)
         {
-            GameOverMenu.SetActive(true);
+            gameOverMenu.SetActive(true);
             grid.SetActive(false);
             Time.timeScale = 0;
         }

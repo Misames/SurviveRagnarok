@@ -5,14 +5,14 @@ namespace BehaviorTree
 {
     public class Action : Node
     {
-        public Del DoAction;
+        public Del doAction;
         public delegate NodeState Del();
 
         public Action() : base() { }
 
         public void AssignAction(Del actionFunction)
         {
-            DoAction = actionFunction;
+            doAction = actionFunction;
         }
 
         /*
@@ -82,7 +82,7 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            state = DoAction();
+            state = doAction();
             if (state == NodeState.RUNNING)
             {
                 foreach (Node child in children)

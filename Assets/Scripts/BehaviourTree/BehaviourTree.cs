@@ -15,8 +15,8 @@ namespace BehaviorTree
     class BehaviourTree
     {
         private static BehaviourTree instance;
-        public Node start;
-        public Dictionary<BlackboardVariable, object> Blackboard;
+        public Node root;
+        public Dictionary<BlackboardVariable, object> blackboard;
 
         public static BehaviourTree Instance()
         {
@@ -27,13 +27,13 @@ namespace BehaviorTree
         public BehaviourTree()
         {
             instance = this;
-            start = new Node();
-            Blackboard = new Dictionary<BlackboardVariable, object>();
+            root = new Node();
+            blackboard = new Dictionary<BlackboardVariable, object>();
         }
 
         public void Compute()
         {
-            start.Evaluate();
+            root.Evaluate();
         }
     }
 }

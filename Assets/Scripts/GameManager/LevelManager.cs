@@ -6,8 +6,8 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public TextMeshProUGUI enemy;
     public GameObject grid;
-    public GameObject VictoryMenu;
-    public Transform Objectif;
+    public GameObject victoryMenu;
+    public Transform objectif;
     public Transform[] enemySpawns;
     public float timeBetweenWaves;
     public float timeBeforeRoundStarts;
@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
         currentRound = 0;
         enemyManager = GetComponent<EnemyManager>();
         enemyManager.SetSpawnPoints(enemySpawns);
-        enemyManager.SetObjectif(Objectif);
+        enemyManager.SetObjectif(objectif);
     }
 
     private void SpawnEnemies(int i)
@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour
                 {
                     isIntermission = false;
                     isRoundGoing = false;
-                    VictoryMenu.SetActive(true);
+                    victoryMenu.SetActive(true);
                     grid.SetActive(false);
                 }
                 else

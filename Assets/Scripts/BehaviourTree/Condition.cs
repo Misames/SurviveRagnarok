@@ -2,19 +2,19 @@ namespace BehaviorTree
 {
     public class Condition : Node
     {
-        public Del EvaluateCondition;
+        public Del evaluateCondition;
         public delegate NodeState Del();
 
         public Condition() : base() { }
 
         public void AssignCondition(Del conditionFunction)
         {
-            EvaluateCondition = conditionFunction;
+            evaluateCondition = conditionFunction;
         }
 
         public override NodeState Evaluate()
         {
-            state = EvaluateCondition();
+            state = evaluateCondition();
             if (state == NodeState.SUCCESS)
             {
                 foreach (Node child in children)
