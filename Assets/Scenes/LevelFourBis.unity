@@ -6300,7 +6300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 6359360748633878291, guid: 34f7da98aea43234788093e7d1e98285, type: 3}
-  difficultyScalingFactor: 0.75
+  enemySpawns: []
   timeBetweenSpawn: 0
 --- !u!114 &1262854644
 MonoBehaviour:
@@ -6316,8 +6316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 189407992}
   grid: {fileID: 318225954}
-  VictoryMenu: {fileID: 306364330}
-  Objectif: {fileID: 1285849718}
+  victoryMenu: {fileID: 306364330}
+  objectif: {fileID: 1285849718}
   enemySpawns:
   - {fileID: 532713951}
   - {fileID: 2037417371}
@@ -8477,6 +8477,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 297206273}
     - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
+      propertyPath: gameOverMenu
+      value: 
+      objectReference: {fileID: 297206273}
+    - target: {fileID: 985617191502328600, guid: f5cd3002a6db8de408ddecac49ab52c2, type: 3}
       propertyPath: startingGold
       value: 400
       objectReference: {fileID: 0}
@@ -8607,7 +8611,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1388818165496426451, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -208.72998
+      value: -208.72995
       objectReference: {fileID: 0}
     - target: {fileID: 1494142443482771048, guid: a6c3accac28a56d46b50546b4d2a3dc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

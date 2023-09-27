@@ -6,17 +6,15 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]
     private GameObject[] enemyPrefabs;
     [SerializeField]
-    private float difficultyScalingFactor = 0.75f;
     private Transform[] enemySpawns;
     private Transform enemyObjectif;
     public float timeBetweenSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
-    private bool isSpawning = false;
 
     public void EnemyDestroyed()
     {
-        enemiesAlive--;
+        enemiesAlive -= 1;
     }
 
     private void Update()
@@ -24,7 +22,7 @@ public class EnemyManager : MonoBehaviour
         if (enemiesLeftToSpawn > 0)
         {
             SpawnEnemy();
-            enemiesLeftToSpawn--;
+            enemiesLeftToSpawn -= 1;
         }
     }
 
@@ -44,8 +42,8 @@ public class EnemyManager : MonoBehaviour
         GameObject prefabToSpawn = enemyPrefabs[randomEnemyType];
         int randomSpawn = Random.Range(0, enemySpawns.Length);
         Vector3 spawnPos = enemySpawns[randomSpawn].position;
-        GameObject newEnemy = Instantiate(prefabToSpawn,new Vector3(spawnPos.x,spawnPos.y,0) , Quaternion.identity);
-        newEnemy.GetComponent<Enemy>().setTarget(enemyObjectif.position);
+        GameObject newEnemy = Instantiate(prefabToSpawn, new Vector3(spawnPos.x, spawnPos.y, 0), Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().SetTarget(enemyObjectif.position);
         newEnemy.GetComponent<Enemy>().SetEnemyManager(GetComponent<EnemyManager>());
         enemiesAlive++;
     }

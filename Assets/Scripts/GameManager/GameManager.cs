@@ -4,7 +4,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject GameOverMenu;
+    public GameObject gameOverMenu;
     public GameObject grid;
     public TextMeshProUGUI health;
     public TextMeshProUGUI gold;
@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public uint startingGold = 100; // Or de départ du joueur
     public int playerHealth = 100; // Points de vie du joueur
     public GameObject[] buildings; // Liste de batiment disponible pour le niveau actuel
-    private uint currentWave = 0; // Vague actuelle
     private uint currentGold; // Or actuel du joueur
 
     // Singleton pattern pour accéder au GameManager depuis d'autres scripts
@@ -68,7 +67,7 @@ public class GameManager : MonoBehaviour
         // Vérifie si le joueur a perdu
         if (playerHealth <= 0)
         {
-            GameOverMenu.SetActive(true);
+            gameOverMenu.SetActive(true);
             grid.SetActive(false);
             Time.timeScale = 0;
         }

@@ -7,25 +7,24 @@ public class Enemy : MonoBehaviour
     private float speed;
     [SerializeField]
     private float health;
-    [SerializeField]
     public uint killReward;
-    [SerializeField]
     public int damage;
     private EnemyManager enemyManager;
     private Vector3 target;
+    public bool collided;
 
     private void Start()
     {
         GetComponent<NavMeshAgent>().SetDestination(target);
     }
 
-    public void takeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0) die();
+        if (health <= 0) Die();
     }
 
-    public void setTarget(Vector3 position)
+    public void SetTarget(Vector3 position)
     {
         target = position;
     }
@@ -35,7 +34,7 @@ public class Enemy : MonoBehaviour
         enemyManager = manager;
     }
 
-    private void die()
+    private void Die()
     {
         enemyManager.EnemyDestroyed();
         GameManager.Instance.EarnGold(killReward);

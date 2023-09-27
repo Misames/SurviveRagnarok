@@ -14,7 +14,20 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            collision.gameObject.GetComponent<Enemy>().takeDamage(damage);
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy.collided != true)
+            {
+                enemy.TakeDamage(damage);
+                enemy.collided = true;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.TryGetComponent<Enemy>(out var enemy))
+        {
+            enemy.collided = false;
             Destroy(gameObject);
         }
     }
