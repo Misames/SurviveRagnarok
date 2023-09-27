@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine.Assertions;
 
 namespace BehaviorTree
 {
@@ -12,26 +11,41 @@ namespace BehaviorTree
         enemyProximityLimit
     }
 
-    class BehaviourTree
+    public class BehaviourTree
     {
-        private static BehaviourTree instance;
-        public Node root;
-        public Dictionary<BlackboardVariable, object> blackboard;
+        private readonly Node root;
+        private readonly Dictionary<BlackboardVariable, object> blackboard;
 
-        public static BehaviourTree Instance()
+        public void ClearBlackboard()
         {
-            Assert.IsNotNull(instance);
-            return instance;
+            blackboard.Clear();
+        }
+
+        public object GetVariable(BlackboardVariable key)
+        {
+            if (blackboard.TryGetValue(key, out object value))
+                return value;
+            return null;
+        }
+
+        public void SetVariable(BlackboardVariable key, object value)
+        {
+            blackboard.Add(key, value);
         }
 
         public BehaviourTree()
         {
-            instance = this;
             root = new Node();
             blackboard = new Dictionary<BlackboardVariable, object>();
         }
 
-        public void Compute()
+        public BehaviourTree(Node root)
+        {
+            this.root = root;
+            blackboard = new Dictionary<BlackboardVariable, object>();
+        }
+
+        public void StartEvaluation()
         {
             root.Evaluate();
         }

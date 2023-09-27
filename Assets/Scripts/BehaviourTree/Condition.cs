@@ -35,7 +35,6 @@ namespace BehaviorTree
                     }
                 }
             }
-
             return state;
         }
     }

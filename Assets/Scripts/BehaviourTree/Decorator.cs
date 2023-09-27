@@ -38,7 +38,8 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            foreach (Node child in children) state = child.Evaluate();
+            foreach (Node child in children)
+                state = child.Evaluate();
 
             uint i = 0;
             if (state == NodeState.FAILURE)
@@ -50,7 +51,6 @@ namespace BehaviorTree
                     i++;
                 }
             }
-
             return state;
         }
     }
@@ -72,7 +72,6 @@ namespace BehaviorTree
                 foreach (Node child in children)
                     state = child.Evaluate();
             }
-
             return state;
         }
     }
