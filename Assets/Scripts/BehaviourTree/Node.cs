@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BehaviorTree
+namespace BehaviourTree
 {
     public enum NodeState
     {
@@ -22,8 +22,12 @@ namespace BehaviorTree
 
         public Node(List<Node> children)
         {
-            foreach (Node child in children)
+            int count = children.Count;
+            for (int i = 0; i < count; ++i)
+            {
+                Node child = children[i];
                 Attach(child);
+            }
         }
 
         private void Attach(Node node)
@@ -34,8 +38,10 @@ namespace BehaviorTree
 
         public virtual NodeState Evaluate()
         {
-            foreach (Node child in children)
+            int count = children.Count;
+            for (int i = 0; i < count; ++i)
             {
+                Node child = children[i];
                 switch (child.Evaluate())
                 {
                     case NodeState.FAILURE:
@@ -43,13 +49,10 @@ namespace BehaviorTree
                         return state;
                     case NodeState.SUCCESS:
                         state = NodeState.SUCCESS;
-                        continue;
+                        break;
                     case NodeState.RUNNING:
                         state = NodeState.RUNNING;
                         break;
-                    default:
-                        state = NodeState.SUCCESS;
-                        return state;
                 }
             }
             return state;

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BehaviorTree
+namespace BehaviourTree
 {
     public enum BlackboardVariable
     {
@@ -11,7 +11,7 @@ namespace BehaviorTree
         enemyProximityLimit
     }
 
-    public class BehaviourTree
+    public class Tree
     {
         private readonly Node root;
         private readonly Dictionary<BlackboardVariable, object> blackboard;
@@ -33,15 +33,15 @@ namespace BehaviorTree
             blackboard.Add(key, value);
         }
 
-        public BehaviourTree()
+        public Tree()
         {
-            root = new Node();
+            root = new();
             blackboard = new Dictionary<BlackboardVariable, object>();
         }
 
-        public BehaviourTree(Node root)
+        public Tree(Node node)
         {
-            this.root = root;
+            root = node;
             blackboard = new Dictionary<BlackboardVariable, object>();
         }
 

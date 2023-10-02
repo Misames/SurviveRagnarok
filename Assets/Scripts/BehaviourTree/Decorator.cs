@@ -1,10 +1,15 @@
-namespace BehaviorTree
+namespace BehaviourTree
 {
     public class DecoratorForceFailure : Node
     {
         public override NodeState Evaluate()
         {
-            foreach (Node child in children) child.Evaluate();
+            int count = children.Count;
+            for (int i = 0; i < count; i++)
+            {
+                Node child = children[i];
+                child.Evaluate();
+            }
             return NodeState.FAILURE;
         }
     }
@@ -13,7 +18,12 @@ namespace BehaviorTree
     {
         public override NodeState Evaluate()
         {
-            foreach (Node child in children) child.Evaluate();
+            int count = children.Count;
+            for (int i = 0; i < count; ++i)
+            {
+                Node child = children[i];
+                child.Evaluate();
+            }
             return NodeState.SUCCESS;
         }
     }
@@ -22,7 +32,12 @@ namespace BehaviorTree
     {
         public override NodeState Evaluate()
         {
-            foreach (Node child in children) state = child.Evaluate();
+            int count = children.Count;
+            for (int i = 0; i < count; ++i)
+            {
+                Node child = children[i];
+                state = child.Evaluate();
+            }
             return state == NodeState.SUCCESS ? NodeState.FAILURE : NodeState.SUCCESS;
         }
     }
@@ -38,23 +53,29 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            foreach (Node child in children)
+            int count = children.Count;
+            for (int i = 0; i < count; ++i)
+            {
+                Node child = children[i];
                 state = child.Evaluate();
+            }
 
-            uint i = 0;
+            int j = 0;
             if (state == NodeState.FAILURE)
             {
-                while (i < nbRetry && state != NodeState.SUCCESS)
+                while (j < nbRetry && state != NodeState.SUCCESS)
                 {
-                    foreach (Node child in children)
+                    for (int k = 0; k < children.Count; ++k)
+                    {
+                        Node child = children[k];
                         state = child.Evaluate();
-                    i++;
+                    }
+                    ++j;
                 }
             }
             return state;
         }
     }
-
 
     public class DecoratorRepeat : Node
     {
@@ -67,10 +88,13 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            for (int i = 0; i < nbRepeat; i++)
+            for (int i = 0; i < nbRepeat; ++i)
             {
-                foreach (Node child in children)
+                for (int j = 0; j < children.Count; ++j)
+                {
+                    Node child = children[j];
                     state = child.Evaluate();
+                }
             }
             return state;
         }

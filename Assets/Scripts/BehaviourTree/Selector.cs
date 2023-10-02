@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BehaviorTree
+namespace BehaviourTree
 {
     public class Selector : Node
     {
@@ -10,8 +10,10 @@ namespace BehaviorTree
 
         public override NodeState Evaluate()
         {
-            foreach (Node node in children)
+            int count = children.Count;
+            for (int i = 0; i < count; ++i)
             {
+                Node node = children[i];
                 switch (node.Evaluate())
                 {
                     case NodeState.FAILURE:
@@ -22,8 +24,6 @@ namespace BehaviorTree
                     case NodeState.RUNNING:
                         state = NodeState.RUNNING;
                         return state;
-                    default:
-                        continue;
                 }
             }
             return NodeState.FAILURE;

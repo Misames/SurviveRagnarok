@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BehaviorTree
+namespace BehaviourTree
 {
     // Exemple de comportement "Patrouiller"
     public class Patrol : Node

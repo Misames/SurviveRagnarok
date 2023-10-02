@@ -1,4 +1,4 @@
-namespace BehaviorTree
+namespace BehaviourTree
 {
     public class Condition : Node
     {
@@ -17,8 +17,10 @@ namespace BehaviorTree
             state = evaluateCondition();
             if (state == NodeState.SUCCESS)
             {
-                foreach (Node child in children)
+                int count = children.Count;
+                for (int i = 0; i < count; ++i)
                 {
+                    Node child = children[i];
                     switch (child.Evaluate())
                     {
                         case NodeState.FAILURE:
@@ -30,8 +32,6 @@ namespace BehaviorTree
                         case NodeState.RUNNING:
                             state = NodeState.RUNNING;
                             return NodeState.RUNNING;
-                        default:
-                            continue;
                     }
                 }
             }
