@@ -36,26 +36,6 @@ namespace BehaviourTree
             children.Add(node);
         }
 
-        public virtual NodeState Evaluate()
-        {
-            int count = children.Count;
-            for (int i = 0; i < count; ++i)
-            {
-                Node child = children[i];
-                switch (child.Evaluate())
-                {
-                    case NodeState.FAILURE:
-                        state = NodeState.FAILURE;
-                        return state;
-                    case NodeState.SUCCESS:
-                        state = NodeState.SUCCESS;
-                        break;
-                    case NodeState.RUNNING:
-                        state = NodeState.RUNNING;
-                        break;
-                }
-            }
-            return state;
-        }
+        public virtual NodeState Evaluate() => NodeState.FAILURE;
     }
 }

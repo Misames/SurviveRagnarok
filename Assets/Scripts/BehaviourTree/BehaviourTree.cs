@@ -1,53 +1,15 @@
-using System.Collections.Generic;
+using UnityEngine;
 
 namespace BehaviourTree
 {
-    public enum BlackboardVariable
+    public abstract class Tree : MonoBehaviour
     {
-        myPlayerPosition,
-        myPlayerId,
-        targetPosition,
-        targetIsEnemy,
-        enemyProximityLimit
-    }
+        private Node root = null;
 
-    public class Tree
-    {
-        private readonly Node root;
-        private readonly Dictionary<BlackboardVariable, object> blackboard;
+        protected abstract Node SetupTree();
 
-        public void ClearBlackboard()
-        {
-            blackboard.Clear();
-        }
+        private void Start() => root = SetupTree();
 
-        public object GetVariable(BlackboardVariable key)
-        {
-            if (blackboard.TryGetValue(key, out object value))
-                return value;
-            return null;
-        }
-
-        public void SetVariable(BlackboardVariable key, object value)
-        {
-            blackboard.Add(key, value);
-        }
-
-        public Tree()
-        {
-            root = new();
-            blackboard = new Dictionary<BlackboardVariable, object>();
-        }
-
-        public Tree(Node node)
-        {
-            root = node;
-            blackboard = new Dictionary<BlackboardVariable, object>();
-        }
-
-        public void StartEvaluation()
-        {
-            root.Evaluate();
-        }
+        private void Update() => root?.Evaluate();
     }
 }
