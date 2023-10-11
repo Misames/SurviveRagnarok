@@ -18,7 +18,7 @@ stability_api = client.StabilityInference(
 )
 
 # Fonction pour générer et sauvegarder l'image
-def generate_and_save_image(prompt_text, init_image=None):
+def generate_and_save_image(prompt_text, start_scheduleValue, stepsValue, cfg_scaleValue, init_image=None):
 
     openedImage = None
 
@@ -28,10 +28,10 @@ def generate_and_save_image(prompt_text, init_image=None):
     answers = stability_api.generate(
         prompt=prompt_text,
         init_image=openedImage,
-        start_schedule=0.6,
+        start_schedule=start_scheduleValue,
         seed=0 if not init_image else 0,
-        steps=30,
-        cfg_scale=8.0 if not init_image else 9.0,
+        steps=stepsValue,
+        cfg_scale=cfg_scaleValue,
         width=1024,
         height=1024,
         sampler=generation.SAMPLER_K_DPMPP_2M

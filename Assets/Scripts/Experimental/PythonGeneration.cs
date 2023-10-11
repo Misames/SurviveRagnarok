@@ -3,21 +3,37 @@ using Python.Runtime;
 using TMPro;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class PythonGeneration : MonoBehaviour
 {
+    // Slider
+    public TextMeshProUGUI stepsValue;
+    public Slider stepsSlider;
+
+    public TextMeshProUGUI cfgscaleValue;
+    public Slider cfgscaleSlider;
+
+    public TextMeshProUGUI imagestrengthValue;
+    public Slider imagestrengthSlider;
+
+    [Space(10)]
+
     // Text to convert to Python Code
     public TextAsset textToConvert;
 
+    [Space(10)]
+
     // All UI to interact with
-    public TMP_InputField FirstInputField;
-    public TMP_InputField SecondInputField;
-
-    public Button FirstButton;
-    public Button SecondButton;
-
     public RawImage FirstImage;
+    public TMP_InputField FirstInputField;
+    public Button FirstButton;
+
+    [Space(10)]
+
     public RawImage SecondImage;
+    public TMP_InputField SecondInputField;
+    public Button SecondButton;
 
     // Url of the generated images
     private string firstImageString = null;
@@ -41,6 +57,17 @@ public class PythonGeneration : MonoBehaviour
             pythonScript = PyModule.FromString("PythonScript", stringImported);
         }
 
+        stepsSlider.value = 30;
+        cfgscaleSlider.value = 8;
+        imagestrengthSlider.value = 0.5f;
+
+    }
+
+    private void Update()
+    {
+        stepsValue.text = stepsSlider.value.ToString();
+        cfgscaleValue.text = cfgscaleSlider.value.ToString();
+        imagestrengthValue.text = imagestrengthSlider.value.ToString("F2");
     }
 
     /// <summary>
@@ -54,11 +81,16 @@ public class PythonGeneration : MonoBehaviour
             return;
         }
 
+        // prompt_text, start_scheduleValue, stepsValue, cfg_scaleValue, init_image=None
+
         var PythonString1 = new PyString(FirstInputField.text);
+        var start_schedule = new PyFloat(1- float.Parse(imagestrengthValue.text));
+        var steps = new PyInt(stepsSlider.value.ToString());
+        var cfg_scale = new PyInt(int.Parse(cfgscaleValue.text));
 
         using (Py.GIL())
         {
-            var result = pythonScript.InvokeMethod("generate_and_save_image", new PyObject[] { PythonString1 });
+            var result = pythonScript.InvokeMethod("generate_and_save_image", new PyObject[] { PythonString1, start_schedule, steps, cfg_scale });
             firstImageString = Application.dataPath + "/GeneratedImages/" + result.ToString();
         }
 
@@ -68,7 +100,6 @@ public class PythonGeneration : MonoBehaviour
         FirstImage.texture = texture;
 
         SecondButton.interactable = true;
-        FirstButton.interactable = false;
     }
 
     /// <summary>
@@ -85,9 +116,13 @@ public class PythonGeneration : MonoBehaviour
         var PythonString1 = new PyString(firstImageString);
         var PythonString2 = new PyString(SecondInputField.text);
 
+        var start_schedule = new PyFloat(1 - float.Parse(imagestrengthValue.text));
+        var steps = new PyInt(stepsSlider.value.ToString());
+        var cfg_scale = new PyInt(int.Parse(cfgscaleValue.text));
+
         using (Py.GIL())
         {
-            var result = pythonScript.InvokeMethod("generate_and_save_image", new PyObject[] { PythonString2, PythonString1});
+            var result = pythonScript.InvokeMethod("generate_and_save_image", new PyObject[] { PythonString2, start_schedule, steps, cfg_scale, PythonString1});
             secondImageString = Application.dataPath + "/GeneratedImages/" + result.ToString();
         }
 
@@ -96,8 +131,6 @@ public class PythonGeneration : MonoBehaviour
         texture.LoadImage(bytes);
         SecondImage.texture = texture;
 
-        SecondButton.interactable = false;
-        FirstButton.interactable = true;
     }
 
 }
