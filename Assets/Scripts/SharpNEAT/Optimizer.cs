@@ -7,17 +7,32 @@ using SharpNeat.Genomes.Neat;
 using System;
 using System.Xml;
 using System.IO;
+using JetBrains.Annotations;
 
 public class Optimizer : MonoBehaviour {
-
-    const int NUM_INPUTS = 5;
-    const int NUM_OUTPUTS = 2;
-
+    
+    
+    [SerializeField]
+    private int NUM_INPUTS = 1;
+    [SerializeField]
+    private int NUM_OUTPUTS = 1;
+    
+    [SerializeField]
+    private string ExperimentName;
+    
+    [SerializeField]
+    private string configFileName;
+    [SerializeField]
+    public string popFileSavePath;
+    [SerializeField]
+    public string champFileSavePath;
+    
     public int Trials;
     public float TrialDuration;
     public float StoppingFitness;
     bool EARunning;
-    string popFileSavePath, champFileSavePath;
+
+    
 
     SimpleExperiment experiment;
     static NeatEvolutionAlgorithm<NeatGenome> _ea;
@@ -39,11 +54,11 @@ public class Optimizer : MonoBehaviour {
         Utility.DebugLog = true;
         experiment = new SimpleExperiment();
         XmlDocument xmlConfig = new XmlDocument();
-        TextAsset textAsset = (TextAsset)Resources.Load("experiment.config");
+        TextAsset textAsset = (TextAsset)Resources.Load(configFileName);
         xmlConfig.LoadXml(textAsset.text);
         experiment.SetOptimizer(this);
 
-        experiment.Initialize("Car Experiment", xmlConfig.DocumentElement, NUM_INPUTS, NUM_OUTPUTS);
+        experiment.Initialize(ExperimentName, xmlConfig.DocumentElement, NUM_INPUTS, NUM_OUTPUTS);
 
         champFileSavePath = Application.persistentDataPath + string.Format("/{0}.champ.xml", "car");
         popFileSavePath = Application.persistentDataPath + string.Format("/{0}.pop.xml", "car");       
@@ -78,7 +93,7 @@ public class Optimizer : MonoBehaviour {
     public void StartEA()
     {        
         Utility.DebugLog = true;
-        Utility.Log("Starting PhotoTaxis experiment");
+        Utility.Log("Starting experiment");
         // print("Loading: " + popFileLoadPath);
         _ea = experiment.CreateEvolutionAlgorithm(popFileSavePath);
         startTime = DateTime.Now;
@@ -136,9 +151,7 @@ public class Optimizer : MonoBehaviour {
         Utility.Log("Total time elapsed: " + (endTime - startTime));
 
         System.IO.StreamReader stream = new System.IO.StreamReader(popFileSavePath);
-       
 
-      
         EARunning = false;        
         
     }
